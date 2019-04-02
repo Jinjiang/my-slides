@@ -4,7 +4,7 @@
 
 ## About
 
-![](images/future.jpg)
+![](./images/future.jpg)
 
 ----
 
@@ -32,7 +32,7 @@
 
 这是什么？
 
-![](images/logo.svg)
+![](./images/logo.svg)
 
 ----
 
@@ -46,7 +46,7 @@
 
 ## 组件化开发
 
-![](images/components.jpg)
+![](./images/components.jpg)
 
 ----
 
@@ -58,7 +58,7 @@
 
 ## 隐藏内部结构
 
-![](images/shadows.jpg)
+![](./images/shadows.jpg)
 
 ----
 
@@ -123,7 +123,7 @@
 
 ## 实例
 
-![](images/decorator-components.jpg)
+![](./images/decorator-components.jpg)
 
 ----
 
@@ -155,11 +155,11 @@
 
 ----
 
-![](images/shadows.png)
+![](./images/shadows.png)
 
 ----
 
-![](images/inception.jpg)
+![](./images/inception.jpg)
 
 ----
 
@@ -180,7 +180,7 @@
 
 ## `<cssconf-speaker>`
 
-![](images/cssconf-speaker.png)
+![](./images/cssconf-speaker.png)
 
 ----
 
@@ -322,13 +322,13 @@
 
 ## 卖家装修后台
 
-![](images/decorator.png)
+![](./images/decorator.png)
 
 ----
 
 ## Zorro.html
 
-![](images/zorro.png)
+![](./images/zorro.png)
 
 ----
 

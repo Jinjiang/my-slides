@@ -88,25 +88,25 @@
 
 ### yml 配置文件
 
-![travis-ci](images/travis.png)
+![travis-ci](./images/travis.png)
 
 ----
 
 ### yml 配置文件
 
-![travis-ci](images/travis.yml.png)
+![travis-ci](./images/travis.yml.png)
 
 ----
 
 ### yml 配置文件
 
-![hexo](images/hexo.png)
+![hexo](./images/hexo.png)
 
 ----
 
 ### yml 配置文件
 
-![hexo](images/hexo.config.png)
+![hexo](./images/hexo.config.png)
 
 ----
 
@@ -136,25 +136,25 @@
 
 ### 序列表和映射表
 
-![](images/yml-sequences.png)
+![](./images/yml-sequences.png)
 
 ----
 
 ### 序列表和映射表
 
-![](images/yml-mappings.png)
+![](./images/yml-mappings.png)
 
 ----
 
 ### 每行一条且支持缩进
 
-![](images/yml-mappings-sequences.png)
+![](./images/yml-mappings-sequences.png)
 
 ----
 
 ### 每行一条且支持缩进
 
-![](images/yml-sequences-mappings.png)
+![](./images/yml-sequences-mappings.png)
 
 ----
 
@@ -164,25 +164,25 @@
 
 ### `---` 代表段落分隔
 
-![](images/yml-blocks.png)
+![](./images/yml-blocks.png)
 
 ----
 
 ### 数据格式
 
-![](images/yml-types.png)
+![](./images/yml-types.png)
 
 ----
 
 ### 多种字符串的表达方式
 
-![](images/yml-types-string.png)
+![](./images/yml-types-string.png)
 
 ----
 
 ### 重复的内容 `&` 和 `$`
 
-![](images/yml-repeat.png)
+![](./images/yml-repeat.png)
 
 ----
 
@@ -229,7 +229,7 @@ YAML 以文本作为数据载体，能够表述一定的数据结构，拥有基
 
 ----
 
-![](images/yml-libs.png)
+![](./images/yml-libs.png)
 
 ----
 
@@ -243,146 +243,3 @@ JSON 也是这样的
 - Bower 中的 `bower.json`
 - ...
 
-----
-
-![](images/readable-json.png)
-
-----
-
-还有一些类似的数据格式，比如 `ini` 文件  
-[Wikipedia](https://en.wikipedia.org/wiki/INI_file)
-
-----
-
-![](images/readable-ini.png)
-
-----
-
-当然，还有 `xml` 文件，这里不多做介绍
-
-----
-
-我们大前端已经有 HTML 和 JSON 了！为什么还需要 YAML？
-
-----
-
-### 大背景
-
-因为前端的技术在发展  
-不同的语言和技术之间在融合
-
-----
-
-### 人类可读性
-
-总体上出现的特殊字符越少，结构越直观，可读性越强，也越适合人类书写，JSON/XML 并不占优势
-
-----
-
-### 程序可读性
-
-JSON 在 JavaScript 中不需要另行解析，但在其它语言中也并没有优势
-
-----
-
-### 结构性
-
-XML 的结构设计相对复杂一些，配套的设施积累比较多，语法更加严谨，适用于较为复杂的场景
-
-----
-
-随着前端的发展，我们会越来越多的和 YAML 数据打交道，同时也希望大家能够从“human readable data”的角度理解它的意义和价值
-
-----
-
-把 human readable 的理念运用在更多的地方
-
-----
-
-声明式 vs 命令式
-
-----
-
-![](images/sample-dom.png)
-
-----
-
-![](images/sample-html.png)
-
-----
-
-更少的代码
-
-----
-
-![](images/sample-json.png)
-
-----
-
-更少的特殊字符
-
-----
-
-![](images/sample-yaml.png)
-
-----
-
-你还想到了哪些东西？
-
-----
-
-coffee / sass / jade / mustache / ...
-
-----
-
-# One more thing
-
-----
-
-Machine Readable Data
-
-----
-
-### Machine Readable Data
-
-让一些看似无形的东西尽量被计算机理解
-
-----
-
-### Machine Readable Data
-
-比如 条形码和二维码
-
-----
-
-### Machine Readable Data
-
-以及在 Web 中被大量使用的
-
-----
-
-### Machine Readable Data
-
-structured data on the Internet, on web pages, in email messages, ...
-
-- [Microdata](https://html.spec.whatwg.org/multipage/microdata.html)
-- [RDFa](http://www.w3.org/TR/rdfa-lite/)
-- [Microformat](http://microformats.org/wiki/microformats2)
-
-----
-
-### Machine Readable Data
-
-更多参考
-
-- [Schema.org](https://schema.org/docs/gs.html) RDFa, Microdata and JSON-LD
-
-----
-
-### Machine Readable Data
-
-- [WAI-ARIA](http://www.w3.org/TR/wai-aria/usage)
-
-----
-
-# Thanks
