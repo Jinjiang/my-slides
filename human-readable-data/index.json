@@ -1,0 +1,47 @@
+{
+  "title": "Human Readable Data",
+  "topics": [
+    {
+      "url": "start.md",
+      "label": "Start",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    },
+    {
+      "url": "background.md",
+      "label": "故事",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    },
+    {
+      "url": "yaml.md",
+      "label": "YAML",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    },
+    {
+      "url": "background2.md",
+      "label": "回到故事",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    },
+    {
+      "url": "what.md",
+      "label": "Human Readable Data",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    },
+    {
+      "url": "more.md",
+      "label": "One More Thing",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    },
+    {
+      "url": "end.md",
+      "label": "End",
+      "themecolor": "white",
+      "themebg": "#005A9C"
+    }
+  ]
+}
