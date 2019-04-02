@@ -1,6 +1,6 @@
 ### My Slides
 
-press <kbd label="Arrow Right">➡</kbd> to see...
+press <kbd label="Arrow Right">→</kbd> to see...
 
 ----
 
