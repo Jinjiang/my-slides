@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>武磊 - CSS Float Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #333; color: #eef;
+      font-family: sans-serif;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+    }
+    h1,h2,h3,a { color: white; }
+    ul { list-style: none; }
+
+    #container { width: 1200px; margin: auto; padding: 2em 0; clear: both; }
+    #photo {
+      float: left; width: 100%; border-radius: 10px;
+      shape-outside: polygon(0% 0%, 45% 0, 52% 52%, 32% 100%, 0% 100%);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+
+    <!-- Using CSS Shapes Module -->
+    <!-- https://drafts.csswg.org/css-shapes/ -->
+    <img id="photo" role="none" alt="武磊的照片" src="./wulei.jpg" />
+
+    <h1>武磊</h1>
+    <h2>個人信息</h2>
+    <ul>
+      <li><strong>全名：</strong>武磊</li>
+      <li><strong>暱稱：</strong>武球王、中国梅西、核武7</li>
+      <li><strong>出生日</strong>期：1991-11-19 (27歲)</li>
+      <li><strong>出生地</strong>點：中国江苏南京</li>
+      <li><strong>身高：</strong>1.72米</li>
+      <li><strong>位置：</strong>前锋/前腰</li>
+    </ul>
+    <h2>俱乐部信息</h2>
+    <ul>
+      <li><strong>現在所屬：</strong>西班牙人</li>
+      <li><strong>球衣號碼：</strong>24</li>
+    </ul>
+    <h2>青年隊</h2>
+    <ul>
+      <li><strong>2003–2005：</strong>根宝足球基地</li>
+    </ul>
+    <h2>職業俱乐部 <sup>年份：球隊 - 出场 - (进球)</sup></h2>
+    <ul>
+      <li><strong>2006–2018：</strong>上海上港 - 296 - (151)</li>
+      <li><strong>2019–：</strong>西班牙人 - 7 - (1)</li>
+    </ul>
+    <h2>国家队 <sup>年份：球隊 - 出场 - (进球)</sup></h2>
+    <ul>
+      <li><strong>2007–2008：</strong>中國U-17 - 8 - (7)</li>
+      <li><strong>2009–2010：</strong>中國U-20 - 9 - (11)</li>
+      <li><strong>2010–：</strong>中國 - 63 - (15)</li>
+    </ul>
+    <p>资料来自：<a target="_blank" href="https://zh.wikipedia.org/wiki/%E6%AD%A6%E7%A3%8A">维基百科</a>；图片来自：<a target="_blank" href="https://voice.hupu.com/china/2393068.html">虎扑体育</a></p>
+  </div>
+  <script src="./source-code.js"></script>
+</body>
+</html>
