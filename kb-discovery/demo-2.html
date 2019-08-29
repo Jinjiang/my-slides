@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>回车键事件 - 挖掘键盘的潜能</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="demo-common.css">
+</head>
+<body>
+
+  <input onkeydown="submitIfEnter(event)" />
+  <button onclick="submit()">提交</button>
+
+  <script>
+    function submit() {
+      alert(`您已经提交成功！谢谢。`)
+    }
+    function submitIfEnter (event) {
+      // keyCode 13 means ENTER
+      if (event.keyCode === 13) {
+        submit()
+      }
+    }
+  </script>
+
+  <!-- see source code on page -->
+  <script src="./source-code.js"></script>
+</body>
+</html>
