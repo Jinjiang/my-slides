@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>对话框 - 挖掘键盘的潜能</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="demo-common.css">
+  <style>
+    #layers,
+    #dialog-login,
+    #dialog-forget-password { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: white; flex-direction: column; align-items: center; justify-content: center; }
+  </style>
+</head>
+<body>
+
+  <!--
+    knowledge
+    - focus stack
+      - focusedTargets[]
+    - focus trap
+      - activeDialog
+      - start/end refs
+      - document.addEventListener('focus', trapFocus, true);
+    - event.key === 'Escape'
+      - activeDialog
+  -->
+
+  <button id="btn-login" onclick="goLogin()">登陆...</button>
+
+  <div id="layers">
+
+    <div id="dialog-login">
+      <div tabindex="0"></div>
+      <p>
+        <label for="nickname">昵称</label>
+        <input id="nickname" type="text" />
+      </p>
+      <p>
+        <label for="password">密码</label>
+        <input id="password" type="password" />
+      </p>
+      <p>
+        <button id="btn-login-submit" onclick="submitLoginDialog()">登录</button>
+        <button id="btn-login-cancel" onclick="cancelLoginDialog()">取消</button>
+        <button id="btn-login-forget-password" onclick="goForgetPassword()">忘记密码 ...</button>
+      </p>
+      <div tabindex="0"></div>
+    </div>
+
+    <div id="dialog-forget-password">
+      <div tabindex="0"></div>
+      <p>
+        <label for="email">电邮</label>
+        <input id="email" type="email" />
+      </p>
+      <p>
+        <button id="btn-forget-password-submit" onclick="submitForgetPasswordDialog()">提交</button>
+        <button id="btn-forget-password-cancel" onclick="cancelForgetPasswordDialog()">取消</button>
+      </p>
+      <div tabindex="0"></div>
+    </div>
+
+  </div>
+
+  <script>
+    const nickname = document.getElementById('nickname')
+    const password = document.getElementById('password')
+    const email = document.getElementById('email')
+
+    const btnLogin = document.getElementById('btn-login')
+
+    const layers = document.getElementById('layers')
+
+    const dialogLogin = document.getElementById('dialog-login')
+    const dialogLoginSubmit = document.getElementById('btn-login-submit')
+    const dialogLoginCancel = document.getElementById('btn-login-cancel')
+    const dialogLoginForgetPassword = document.getElementById('btn-login-forget-password')
+
+    const dialogForgetPassword = document.getElementById('dialog-forget-password')
+    const dialogForgetPasswordSubmit = document.getElementById('btn-forget-password-submit')
+    const dialogForgetPasswordCancel = document.getElementById('btn-forget-password-cancel')
+
+    let activeDialog = ''
+    const focusedTargets = []
+
+    function goLogin() {
+      layers.style.display = 'flex'
+      dialogLogin.style.display = 'flex'
+      focusedTargets.push(btnLogin)
+      activeDialog = dialogLogin
+      nickname.focus()
+    }
+
+    function submitLoginDialog() {
+      alert(`Welcome ${nickname.value}!`)
+      layers.style.display = 'none'
+      dialogLogin.style.display = 'none'
+      activeDialog = null
+      focusedTargets.pop().focus()
+    }
+
+    function cancelLoginDialog() {
+      layers.style.display = 'none'
+      dialogLogin.style.display = 'none'
+      activeDialog = null
+      focusedTargets.pop().focus()
+    }
+
+    function goForgetPassword() {
+      dialogForgetPassword.style.display = 'flex'
+      focusedTargets.push(dialogLoginForgetPassword)
+      activeDialog = dialogForgetPassword
+      email.focus()
+    }
+
+    function submitForgetPasswordDialog() {
+      alert('Please check your email box!')
+      dialogForgetPassword.style.display = 'none'
+      activeDialog = dialogLogin
+      focusedTargets.pop().focus()
+    }
+
+    function cancelForgetPasswordDialog() {
+      dialogForgetPassword.style.display = 'none'
+      activeDialog = dialogLogin
+      focusedTargets.pop().focus()
+    }
+
+    function trapFocus(event) {
+      const { target } = event
+      if (!activeDialog) {
+        return
+      }
+      if (activeDialog === dialogLogin) {
+        if (target === activeDialog.firstElementChild) {
+          dialogLoginForgetPassword.focus()
+        } else if (target === activeDialog.lastElementChild) {
+          nickname.focus()
+        } else if (!activeDialog.contains(target)) {
+          nickname.focus()
+        }
+      }
+      if (activeDialog === dialogForgetPassword) {
+        if (target === activeDialog.firstElementChild) {
+          dialogForgetPasswordCancel.focus()
+        } else if (target === activeDialog.lastElementChild) {
+          email.focus()
+        } else if (!activeDialog.contains(target)) {
+          email.focus()
+        }
+      }
+    }
+
+    function escapeDialog(event) {
+      if (event.key === 'Escape') {
+        if (activeDialog) {
+          event.preventDefault()
+          if (activeDialog === dialogLogin) {
+            cancelLoginDialog()
+          } else if (activeDialog === dialogForgetPassword) {
+            cancelForgetPasswordDialog()
+          }
+        }
+      }
+    }
+
+    document.addEventListener('focus', trapFocus, true);
+    document.addEventListener('keydown', escapeDialog);
+  </script>
+
+  <!-- see source code on page -->
+  <script src="./source-code.js"></script>
+</body>
+</html>

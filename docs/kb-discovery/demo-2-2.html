@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>key &amp; code - 挖掘键盘的潜能</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="demo-common.css">
+</head>
+<body onkeypress="printKeyAndCode(event)">
+
+  <div>
+    <p>Press ANY key to continue...</p>
+    <ul id="output"></ul>
+  </div>
+
+  <script>
+    const output = document.getElementById('output')
+    function printKeyAndCode (event) {
+      const item = document.createElement('li')
+      item.textContent = `key: ${event.key}, code: ${event.code}`
+      output.appendChild(item)
+    }
+  </script>
+
+  <!-- see source code on page -->
+  <script src="./source-code.js"></script>
+</body>
+</html>

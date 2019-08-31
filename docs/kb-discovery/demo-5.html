@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>按钮组合 - 挖掘键盘的潜能</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="demo-common.css">
+  <style>
+    .gender { display: inline-block; padding: 0 1em; color: #3896b5; background: #f0f0f0; border-radius: 3px; border: 0; line-height: 2; }
+    .gender.selected { background: grey; color: white; }
+  </style>
+</head>
+<body>
+
+  <!--
+  - profile
+    - action group
+      - reset password, change account, logout
+      - tab-by-tab
+    - nickname
+    - gender
+      - one tab + arrow keys nav
+  -->
+  <main>
+    <h1>个人信息</h1>
+    <p align="right">
+      <button>重置密码</button>
+      <button>登出</button>
+    </p>
+    <p>
+      <label for="nickname">昵称</label>
+      <input id="nickname" type="text" />
+    </p>
+    <!-- <p>
+      <label>性别</label>
+      <label><input type="radio" name="gender" value="male" /> 男</label>
+      <label><input type="radio" name="gender" value="female" /> 女</label>
+    </p> -->
+    <p>
+      <label>性别</label>
+      <span id="male" class="gender selected" tabindex="0"
+        onclick="selectMale()"
+        onkeydown="nav(event)"
+      >男</span>
+      <span id="female" class="gender" tabindex="-1"
+        onclick="selectFemale()"
+        onkeydown="nav(event)"
+      >女</span>
+    </p>
+    <p>
+      <button>保存</button>
+    </p>
+  </main>
+
+  <script>
+    const male = document.getElementById('male')
+    const female = document.getElementById('female')
+
+    let currentGender = 'male'
+
+    function selectMale() {
+      male.setAttribute('tabindex', '0')
+      male.classList.add('selected')
+      female.setAttribute('tabindex', '-1')
+      female.classList.remove('selected')
+      currentGender = 'male'
+    }
+
+    function selectFemale() {
+      male.setAttribute('tabindex', '-1')
+      male.classList.remove('selected')
+      female.setAttribute('tabindex', '0')
+      female.classList.add('selected')
+      currentGender = 'female'
+    }
+
+    function nav(event) {
+      if (event.key === 'ArrowRight' && currentGender === 'male') {
+        male.setAttribute('tabindex', '-1')
+        female.setAttribute('tabindex', '0')
+        female.focus()
+        currentGender = 'female'
+      }
+      if (event.key === 'ArrowLeft' && currentGender === 'female') {
+        male.setAttribute('tabindex', '0')
+        female.setAttribute('tabindex', '-1')
+        male.focus()
+        currentGender = 'male'
+      }
+      if (event.key === 'Enter') {
+        if (currentGender === 'male') {
+          selectMale()
+        } else {
+          selectFemale()
+        }
+      }
+    }
+  </script>
+
+  <!-- see source code on page -->
+  <script src="./source-code.js"></script>
+</body>
+</html>
