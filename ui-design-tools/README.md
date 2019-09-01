@@ -50,7 +50,7 @@
 - 导出可用素材更方便
 - 更友善的扩展插件平台
 
-<note>educba.com - Photoshop vs Sketch | Top 7 Useful Difference To Know</note>
+<credits>educba.com - Photoshop vs Sketch | Top 7 Useful Difference To Know</credits>
 
 ----
 
@@ -249,7 +249,7 @@
 - 但其实设计师已经思考过一次了
 - 可惜的是这些思考并无法完整的通过设计稿体现和传递
 
-<note>Guardian Design System</note>
+<credits>Guardian Design System</credits>
 
 ----
 
@@ -257,7 +257,7 @@
 
 有的时候双份的思考和理解成本也无形中增加了项目的成本和复杂度
 
-<note>Guardian Design System</note>
+<credits>Guardian Design System</credits>
 
 ----
 
@@ -368,7 +368,7 @@
 
 前端从 UED 团队脱离之后，设计和前端在各自发展的同时渐行渐远，进而形成脱节的现象
 
-<!-- <note>蒋定宇</note> -->
+<!-- <credits>蒋定宇</credits> -->
 
 ----
 
@@ -476,19 +476,19 @@
 
 ![](atomic-design.png)
 
-<note>Brad Frost, Atomic Design</note>
+<credits>Brad Frost, Atomic Design</credits>
 
 ----
 
 <!-- backgroundImage: article-atomic-design-1.png -->
 
-<note>Brad Frost, Atomic Design</note>
+<credits>Brad Frost, Atomic Design</credits>
 
 ----
 
 <!-- backgroundImage: article-atomic-design-2.png -->
 
-<note>Brad Frost, Atomic Design</note>
+<credits>Brad Frost, Atomic Design</credits>
 
 ----
 
@@ -579,7 +579,7 @@ AR / VR / AI / Blockchain?
 
 We still on the way!
 
-<note>all photos from pexels.com and unsplash.com</note>
+<credits>all photos from pexels.com and unsplash.com</credits>
 
 <!--
 

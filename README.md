@@ -4,6 +4,15 @@ press <kbd label="Arrow Right">→</kbd> to see...
 
 ----
 
+### Latest
+
+- [迎接 UI 設計工具的新時代](ui-design-tools)
+  - <small>ModernWeb 2019, Taiwan, 2019-08-28</small>
+- [挖掘鍵盤的潛能](kb-discovery)
+  - <small>ModernWeb 2019, Taiwan, 2019-08-29</small>
+
+----
+
 ### All in CSSConfCN
 
 - [你不知道的五个 CSS 特性](five-css-features) <small>V, Shenzhen, 2019-03-30</small>

@@ -123,13 +123,13 @@ _代码示例：通过 <kbd>回车键</kbd> 提交表单_
 
 > Returns a Number representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
-<note><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">KeyboardEvent.keyCode - MDN</a></note>
+<credits><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">KeyboardEvent.keyCode - MDN</a></credits>
 
 ----
 
 > Returns a Number representing a system and implementation dependent <mark>numerical code identifying the unmodified value of the pressed key</mark>.
 
-<note><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">KeyboardEvent.keyCode - MDN</a></note>
+<credits><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">KeyboardEvent.keyCode - MDN</a></credits>
 
 ----
 
@@ -198,7 +198,7 @@ Why deprecated?
 
 ### 实际上
 
-<note>https://condenaststore.com/featured/on-the-internet-peter-steiner.html</note>
+<credits>https://condenaststore.com/featured/on-the-internet-peter-steiner.html</credits>
 
 ----
 
@@ -380,13 +380,13 @@ Good for high frequency interactions. -->
 
 ![](placeonas-1.png)
 
-<note>[What voice UI is good for (and what it isn't) | Inside Intercom](https://www.intercom.com/blog/benefits-of-voice-ui/)</note>
+<credits>[What voice UI is good for (and what it isn't) | Inside Intercom](https://www.intercom.com/blog/benefits-of-voice-ui/)</credits>
 
 ----
 
 ![](placeonas-2.png)
 
-<note>[What voice UI is good for (and what it isn't) | Inside Intercom](https://www.intercom.com/blog/benefits-of-voice-ui/)</note>
+<credits>[What voice UI is good for (and what it isn't) | Inside Intercom](https://www.intercom.com/blog/benefits-of-voice-ui/)</credits>
 
 ----
 
@@ -419,7 +419,7 @@ Good for high frequency interactions. -->
 
 ![](w3c-wai-aria.png)
 
-<note>[W3C Accessible Rich Internet Application (WAI-ARIA)- 4 February 2008](https://w3c.github.io/aria/)</note>
+<credits>[W3C Accessible Rich Internet Application (WAI-ARIA)- 4 February 2008](https://w3c.github.io/aria/)</credits>
 
 ----
 
