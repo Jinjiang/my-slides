@@ -36,7 +36,7 @@ what does <mark>ANIMATIONS</mark> mean?
 
 <iframe style="width: 100vw; height: 100vh;" scrolling="no" title="Bouncing DVD Logo" src="//codepen.io/stezu/embed/cmLrI/?theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true"></iframe>
 
-<note><a href='https://codepen.io/stezu/pen/cmLrI/'>Bouncing DVD Logo</a> by Stephen Zuniga</note>
+<credits><a href='https://codepen.io/stezu/pen/cmLrI/'>Bouncing DVD Logo</a> by Stephen Zuniga</credits>
 
 <!-- ANIMATIONS 的意思就不必多解释了，它指的是页面上各种会动的效果。不过这里，我们把范围缩小到通过 CSS 实现的动画。 -->
 
@@ -97,7 +97,7 @@ That seems simple but ...
 <!-- backgroundImage: horse.jpg -->
 <!-- style: background-size: contain; -->
 
-<note>http://oktop.tumblr.com/post/15352780846</note>
+<credits>http://oktop.tumblr.com/post/15352780846</credits>
 
 <!-- 选择合适的动画效果听上去似乎很容易，但也许很多人并不知道如何下手。所以我接下来会提供一些个人建议。 -->
 
@@ -111,7 +111,7 @@ That seems simple but ...
 
 ![](newton.png)
 
-<note>https://whitenoise.kinja.com/otters-oddities-1610623564</note>
+<credits>https://whitenoise.kinja.com/otters-oddities-1610623564</credits>
 
 <!-- 第一条建议，就是从现实生活中获取灵感。用户虽然对你的产品可能会感到陌生，但是每个人都有真实世界的生活经历，尝试为你的产品加入一些日常生活会遇到的特效，会帮助你的用户更容易的理解动效背后的含义。 -->
 
@@ -123,7 +123,7 @@ That seems simple but ...
 
 <iframe style="width: 80vw; height: 60vh;" src="//player.vimeo.com/video/131559925?color=1ab89d&amp;title=0&amp;byline=0&amp;portrait=0" title="IBM 729 magnetic tape unit" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<note><a href="https://www.ibm.com/design/v1/language/experience/animation/elements/">IBM 729 magnetic tape unit</a></note>
+<credits><a href="https://www.ibm.com/design/v1/language/experience/animation/elements/">IBM 729 magnetic tape unit</a></credits>
 
 <!-- 也许你已经见过很多日常生活中的效果应用到界面动画中的例子，这里我只想举一个特别的有趣的例子，是加载中的等待动效。这种动效一般用来交代你的界面内容正在准备中，随时可能会展示出来。这个磁带机的转动特效会暗示用户，虽然界面上还没有发生任何变化，但是你的应用正在紧张的工作之中，请耐心等待它的完成就好。 -->
 
@@ -135,7 +135,7 @@ That seems simple but ...
 
 or from internet
 
-<note>[muzli search](https://search.muz.li)</note>
+<credits>[muzli search](https://search.muz.li)</credits>
 
 <!-- 除了真实世界之外，我们还可以通过互联网获得更多好做好的创意和灵感。这里只推荐一个地方，就是 muzli，你可以在这里搜索到各式各样的动效设计，作为你的参考。有的时候来这里看一看也是个不错的选择。 -->
 
@@ -150,7 +150,7 @@ or from internet
 2.) to fit the characteristics  
   of your product
 
-<note>https://www.heraldnet.com/life/spike-lee-wasnt-the-only-one-horrified-by-green-book-win/</note>
+<credits>https://www.heraldnet.com/life/spike-lee-wasnt-the-only-one-horrified-by-green-book-win/</credits>
 
 <!-- 第二条建议，就是选择适合你的产品风格的动效。 -->
 
@@ -250,7 +250,7 @@ logic/regularity - <mark>bounce</mark> (what?!)
 
 ![](principles.jpg)
 
-<note>[The Twelve Principles of Animation from Disney](https://kryptonians.net/2017/01/05/the-twelve-principle-of-animation/)</note>
+<credits>[The Twelve Principles of Animation from Disney](https://kryptonians.net/2017/01/05/the-twelve-principle-of-animation/)</credits>
 
 <!-- 最后如果这些效果都能够很好的实践，让我们更进一步，看看还有哪些更复杂的动效值得关注和实践，那就是迪士尼总结出来的 12 个最基本的动画原则。它会更复杂更难掌握，但是可以帮助我们作出更酷炫的动效。 -->
 
@@ -272,7 +272,7 @@ ul { list-style-type: none; }
 ul li { position: relative; }
 ul li:before { content: "✔︎"; position: absolute; right: 100%; margin-right: 0.5em; }
 .icon { height: 1em; vertical-align: middle; }
-note { text-shadow: none; }
+credits { text-shadow: none; }
 body { font-family: "Chalkboard SE", "Wawati SC"; }
 h1,h2,h3,h4 { font-family: "Marker Felt", "Wawati SC"; }
 iframe { max-width: 80vw; max-height: 60vh; }
