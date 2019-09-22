@@ -1,0 +1,470 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_zoomout",
+        "layout": "layout_default"
+    },
+    "slides": [{
+        "layout": "layout_title",
+        "values": {
+            "title": "# git和github简介",
+            "content": "赵锦江  \nw3ctech 北京站  \n2011-06-25"
+        }
+    }, {
+        "layout": "layout_default",
+        "transition": "transition_vertical_3d",
+        "values": {
+            "title": "## 自我介绍",
+            "content": "* 赵锦江(勾三股四)\n" +
+                    "* Tags: maxthon/f2e/music/football\n" +
+                    "* QQ: 110698041\n" +
+                    "* E/M: zhaojinjiang@yahoo.com.cn\n" +
+                    "* Blog: [http://jiongks.name/](http://jiongks.name/)\n" +
+                    "* Weibo: [http://weibo.com/mx006](http://weibo.com/mx006)"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 目录",
+            "content": "* 什么是 git?\n" +
+                    "* github.com 及“开源”文化\n" +
+                    "* 如何运用 git?\n" +
+                    "* 创建自己的程序\n" +
+                    "* 获取别人的程序\n" +
+                    "* 改良别人的程序\n" +
+                    "* 后续学习和实践推荐"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# 什么是git?",
+            "content": "git简介"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 开发者工具\n\n" +
+                    "git 并不是一门语言、一个概念或一种“最佳实践”\n\n" +
+                    "----\n\n" +
+                    "### 版本控制系统\n\n" +
+                    "结点：每年为家里的小孩拍一张照片\n\n" +
+                    "----\n\n" +
+                    "### 分布式系统\n\n" +
+                    "没有服务器和客户端的区别，安全、完整。",
+            "title": "## git是一种分布式版本控制系统"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* 自由发挥！自由分支！自由分享！\n" +
+                    "* 与开源、自由的精神相吻合！",
+            "title": "## 我们为什么需要版本控制"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### Linux 内核代码管理程序\n\n" +
+                    "git 是由 Linux 内核的的创始人 Linus Torvalds 创造的。事实上，git 是 Linus 为管理 Linux 内核的代码而建立起来的。他看过了现成的几个源代码管理系统，得出的结论是，没有一个系统是足够快的。所以他自己建立了一个这样的系统。",
+            "title": "## git从何而来?"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content":
+                    "----\n\n" +
+                    "* 小巧而快速\n" +
+                    "\n----\n\n" +
+                    "* 真正的分布式\n" +
+                    "\n----\n\n" +
+                    "* 临时区域(staging area)设计很贴心\n" +
+                    "\n----\n\n" +
+                    "* 可以和 github 完美结合\n" +
+                    "\n----\n\n" +
+                    "* WhyGitIsBetterThanX.com",
+            "title": "## git的特点"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "content": "[http://github.com/](http://github.com/)",
+            "title": "# github和“开源”文化"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* 自由(linux core) / 开源(firefox) / 免费(msn)\n" +
+                    "* 自由软件运动 和 开源运动\n" +
+                    "* 舞台：互联网 (邮件列表、wiki、论坛、社区)\n" +
+                    "* 个人和公司都已经大量参与其中\n" +
+                    "* 团结就是力量！\n" +
+                    "* 催生了大量优秀的资源和产品\n" +
+                    "* webkit 就是开源中的典型",
+            "title": "## “开源”文化简介"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* 寻找优秀的社区和自己感兴趣的项目\n" +
+                    "* 看和学：了解情况，阅读代码\n" +
+                    "* 从小处着手，尝试修正 bug/issue\n" +
+                    "* 制作补丁 (patch)\n" +
+                    "* 熟悉版本控制技巧\n" +
+                    "* 遵循编码规范和项目规范\n" +
+                    "* 更进一步……",
+            "title": "## 如何参与开源项目?"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* 参与项目讨论和项目管理\n" +
+                    "* 成为“固定成员”\n" +
+                    "* 建立/派生自己的分支或版本\n" +
+                    "* 从长计议\n" +
+                    "* 核心在于分享和付出，而不是索取！",
+            "title": "## 参与开源，更进一步……"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 谁在使用github.com?",
+            "picture": "/slides/data/images/20120022020009.png",
+            "content": "github里的语言排名"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## git最佳实践讨论",
+            "picture": "/slides/data/images/20120022020036.jpg"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## git本地与远程的关系",
+            "picture": "/slides/data/images/20120022020056.png"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "content": "下载、发布、派生……",
+            "title": "# 如何运用git?"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "content": "在 github.com 上寻找并下载自己想要的程序",
+            "title": "# 最简单的运用"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 搜索项目或开发者",
+            "content": "在github.com搜索项目或开发者",
+            "picture": "/slides/data/images/20120022020116.png"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 关注 / 追随 / 下载",
+            "picture": "/slides/data/images/20120022020132.png",
+            "content": "在github.com关注项目、追随开发者、下载开源代码"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* 搜索关键字 | follow开发者 | watch项目\n" +
+                    "* 在线查看或预览\n" +
+                    "* 点击下载按钮、解压",
+            "title": "## 在github.com上淘金子"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# 这也算会用GIT啊 - -"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "content": "从基本的命令行开始",
+            "title": "# 安装和配置git"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "    whoami - 命令行里的\"hello world\"\n" +
+                    "    ls(dir)/cd/mkdir/rmdir 查看/进入/创建/删除目录\n" +
+                    "    cp(copy)/mv(move)/rm(del) 移动/复制/删除文件\n" +
+                    "    <cmd-name> -x --xxxx (/xx) 执行命令\n" +
+                    "    <cmd-name> -h --help (/?) 帮助信息\n\n" +
+                    "注：括号内为windows中的写法",
+            "title": "## 命令行常用命令"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### Mac\n\n" +
+                    "[http://code.google.com/p/git-osx-installer/](http://code.google.com/p/git-osx-installer/)\n\n" +
+                    "### Linux\n\n" +
+                    "    sudo apt-get git\n\n" +
+                    "### Windows\n\n" +
+                    "cygwin  \n" +
+                    "选择安装下列模块：\n\n" +
+                    "    devel → git\n" +
+                    "    editors → vim/nano\n\n" +
+                    "即可运行`cygwin.bat`，在命令行下操作git  \n" +
+                    "若cygwin无法正常工作，请先执行下面操作：\n\n" +
+                    "    $ cygwin/bin/ash.exe\n" +
+                    "    $ /bin/rebaseall",
+            "title": "## 安装git"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 选择安装git模块",
+            "picture": "/slides/data/images/20120022020159.png"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## cygwin目录结构",
+            "picture": "/slides/data/images/20120022020217.png"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## cygwin初始化",
+            "picture": "/slides/data/images/20120022020235.png"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "    git config --global user.name \"...\"\n" +
+                    "    git config --global user.email ...\n\n" +
+                    "配置github账户：\n\n" +
+                    "* [http://github.com/guides/providing-your-ssh-key](http://github.com/guides/providing-your-ssh-key)",
+            "title": "## 配置git"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 初始化仓库\n\n" +
+                    "    $ git init\n" +
+                    "    \n" +
+                    "### 查看当前仓库状态\n\n" +
+                    "    $ git status\n" +
+                    "    # On branch master\n" +
+                    "    nothing ot commit (...)\n\n" +
+                    "### 添加文件到临时区域\n\n" +
+                    "    $ git add .\n" +
+                    "    $ git add index.htm style.css ...\n\n" +
+                    "前者为添加全部\n\n" +
+                    "### 提交修改记录\n\n" +
+                    "    $ git commit --all --message \"xxx\"\n" +
+                    "    $ git commit -am \"xxx\"\n\n" +
+                    "两者效果相同\n\n" +
+                    "### 查看修改记录\n\n" +
+                    "    $ git log\n\n" +
+                    "### 移动\n\n" +
+                    "    $ git mv ... ...\n\n" +
+                    "### 删除\n\n" +
+                    "    $ git rm ... ...\n\n" +
+                    "注意区分git mv/rm和mv/rm\n\n" +
+                    "### 用来记录自动忽略添加的文件\n\n" +
+                    "    .gitignore 文件",
+            "title": "## 创建一个git仓库"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 列出所有分支\n\n" +
+                    "    $ git branch \n" +
+                    "      * master\n" +
+                    "        xxx\n" +
+                    "        yyy\n\n" +
+                    "### 创建分支\n\n" +
+                    "    $ git branch xxx\n\n" +
+                    "### 切换到某分支\n\n" +
+                    "    $ git checkout xxx\n\n" +
+                    "### 合并某分支的修改\n\n" +
+                    "    $ git merge xxx\n\n" +
+                    "### 列出所有标签\n\n" +
+                    "    $ git tag \n" +
+                    "      v3.1\n" +
+                    "      v3.0\n" +
+                    "      v2.5\n" +
+                    "      v2.0\n" +
+                    "      v1.0\n\n" +
+                    "### 生成一个新标签(tag)\n\n" +
+                    "    $ git tag v2.0\n\n" +
+                    "### 查看某标签的详细情况\n\n" +
+                    "    $ git show v2.0 \n" +
+                    "      tag v2.0\n" +
+                    "      Tagger: Jinks Zhao ...\n" +
+                    "      Date:   Sat Jul 3 10:06:16 2010 -0400\n" +
+                    "    \n" +
+                    "      half-way to release 1\n" +
+                    "    \n" +
+                    "      commit 08eaf7c6b...\n" +
+                    "      Merge: be96dbe 39a1b50\n" +
+                    "      Author: Jinks Zhao ...\n" +
+                    "      Date:   Sat Jul 3 07:28:16 2010 -0400\n" +
+                    "    \n" +
+                    "                 Merge branch 'xxx'\n\n" +
+                    "### 显示以上一个标签为基础的提交情况\n\n" +
+                    "    $ git describe\n" +
+                    "      v2.0-2-g8ee0f4a",
+            "title": "## 管理分支和标签"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 交互式添加\n\n" +
+                    "    $ git add -i \n\n" +
+                    "### 恢复版本或文件\n\n" +
+                    "    $ git reset --hard HEAD\n" +
+                    "    $ git reset --soft xxx\n" +
+                    "    $ git checkout -- <file.ext>\n\n" +
+                    "### 差异比较\n\n" +
+                    "    $ git diff\n" +
+                    "    $ git diff <file.ext>\n" +
+                    "    $ git diff <commit>\n" +
+                    "    $ git diff <commit> <file.ext>\n" +
+                    "    $ git diff <branch1>..<branch2>\n" +
+                    "    $ git diff <branch1>...<branch2>\n\n" +
+                    "### stash\n\n" +
+                    "如果你在完成一个功能特性的时候发现之前代码里有一个bug，但是这个bug又和你正在开发的功能特性无关，你想在完成整个功能特性开发之前就修复这个bug。但是现在功能特性已经开发一半了，这时候该如何处理呢？\n\n" +
+                    "    $ git stash\n" +
+                    "    $ git stash apply",
+            "title": "## 部分git高级操作"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "查阅相关文档和手册：\n" +
+                    "[http://www.kernel.org/pub/software/scm/git/docs/](http://www.kernel.org/pub/software/scm/git/docs/)",
+            "title": "## 更多的git操作"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "content": "发布、管理、派生",
+            "title": "# git + github.com配合使用"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content":
+                    "### 克隆一个远程的仓库\n\n" +
+                    "    $ git clone git://github.com/nickname/projectname.git [localprojectname]\n\n" +
+                    "### 添加远程跟踪的分支\n\n" +
+                    "    $ git remote add <remoteName> <remoteURL>\n\n" +
+                    "### 获取远程最新的代码\n\n" +
+                    "    $ git fetch origin master\n\n" +
+                    "### 合并远程最新的代码\n\n" +
+                    "    $ git merge origin/master\n\n" +
+                    "### 获取并合并远程最新的代码，前两者的快捷组合命令\n\n" +
+                    "    $ git pull origin master\n\n" +
+                    "### 将本地最新的代码推送至远程仓库\n\n" +
+                    "    $ git push origin master",
+            "title": "## 远程操作相关的git命令"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 在github.com创建自己的仓库",
+            "picture": "/slides/data/images/20120022020306.png"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 在github.com创建自己的仓库",
+            "content": "在github.com成功创建自己的仓库后的操作步骤",
+            "picture": "/slides/data/images/20120022020323.png"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 登录 github.com 并新建一个仓库\n\n" +
+                    "* 起好名字，完成配置\n" +
+                    "* 本地是否已经有现成的代码?\n" +
+                    "  * 添加本地现有的代码\n" +
+                    "  * 或者创建全新的空仓库\n\n" +
+                    "创建全新的空仓库\n\n" +
+                    "    $ cd existing_git_repo\n" +
+                    "    $ git remote add origin git@github.com:nickname/projectname.git\n" +
+                    "    $ git push origin master",
+            "title": "## 在github.com创建自己的仓库"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "    $ git pull origin master\n" +
+                    "    $ git push origin master\n\n" +
+                    "注：直接pull/push主分支并不是很好的习惯",
+            "title": "## 发布、同步本地的代码"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 项目的 \"landing page\"\n\n" +
+                    "形如：http://user.github.com/project/\n\n" +
+                    "做法：\n\n" +
+                    "* 创建一个名为 gh-pages 的远程分支  \n" +
+                    "`$ git push origin gh-pages`\n" +
+                    "* 或者利用 Project Page Generator 自动生成\n\n" +
+                    "官方说明：[http://pages.github.com/](http://pages.github.com/)",
+            "title": "## 创建自己的github pages"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 从github.com派生别人的仓库",
+            "picture": "/slides/data/images/20120022020351.png"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* 在别人仓库的主页，点击 \"fork\" 按钮派生别人的仓库\n" +
+                    "* 完成自己的开发之后，点击 \"pull request\" 按钮，申请原作者将自己的改动合并到原仓库中",
+            "title": "## 从github.com派生别人的仓库"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "content": "方便后续学习、实践",
+            "title": "# 相关资源和参考文献"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## Getting Good with GIT",
+            "picture": "/slides/data/images/20120022020409.png"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "* [http://git-scm.com/](http://git-scm.com/)\n" +
+                    "* [http://book.git-scm.com/](http://book.git-scm.com/)\n" +
+                    "* [http://help.github.com/](http://help.github.com/)\n" +
+                    "* 《pro git》[http://progit.org/book/zh](http://progit.org/book/zh)\n" +
+                    "* 《Git基础》潘魏增 [http://panweizeng.com/](http://panweizeng.com/git-basics.html)",
+            "title": "## 其它学习资料"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "content": "### 《Getting Good with GIT》\n\n" +
+                    "[http://rockablepress.com/books/getting-good-with-git/](http://rockablepress.com/books/getting-good-with-git/)\n\n" +
+                    "### 《Why Git Is Better Than X》\n\n" +
+                    "[http://zh-tw.whygitisbetterthanx.com/](http://zh-tw.whygitisbetterthanx.com/)\n\n" +
+                    "### 《如何加入开源项目的小手册》\n\n" +
+                    "[http://blog.splayer.org/index.php/2011/03/how-to-join-open-source-project/](http://blog.splayer.org/index.php/2011/03/how-to-join-open-source-project/)\n\n" +
+                    "### github.com",
+            "title": "## 引用材料"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# THE END",
+            "content": "谢谢大家"
+        }
+    }]
+}

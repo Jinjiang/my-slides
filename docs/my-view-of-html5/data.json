@@ -1,0 +1,122 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_horizontal_3d",
+        "layout": "layout_default"
+    },
+    "slides": [{
+        "layout": "layout_title",
+        "values": {
+            "title": "# 我眼中的HTML5",
+            "content": "HTML5梦工场 赵锦江  \n爱范儿 - HTML 5 技术沙龙  \n2012-06-28"
+        }
+    }, {
+        "values": {
+            "title": "## HTML5简简简介",
+            "content": "* Web Application！\n" +
+                    "* 接下来的部分观点引用自我年初的博文：[《写给HTML5的2011年》](http://bulaoge.net/topic.blg?tuid=27015&tid=2305412)"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# 业内的两个好朋友",
+            "content": "移动 + 游戏"
+        }
+    }, {
+        "values": {
+            "title": "## 移动 - 巨大的市场潜力",
+            "content": "![](images/mobile.png)"
+        }
+    }, {
+        "values": {
+            "title": "## 游戏 – 成熟的盈利模式",
+            "content": "![](images/game.jpg)"
+        }
+    }, {
+        "values": {
+            "title": "## 国内用户眼中的HTML5",
+            "content": "* 基础应用\n" +
+                    "  * 微博私信通知？\n" +
+                    "  * 在线地图定位？\n" +
+                    "* Google首页Logo？\n" +
+                    "* 其实HTML5是Web 2.0、Ajax等概念的延续\n" +
+                    "  * Gmail、Google Docs\n" +
+                    "  * (Of course) WebQQ"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# 技术与用户之间的角色",
+            "content": "前端开发、IT从业者"
+        }
+    }, {
+        "values": {
+            "title": "## 前端开发眼中的HTML5",
+            "content": "* 更广阔的舞台\n" +
+                    "  * vs Flash / Flex\n" +
+                    "  * vs Native Client\n" +
+                    "* 更易用的技术\n" +
+                    "  * 更多样的用户输入\n" +
+                    "  * CSS 3 样式等\n" +
+                    "* 还有……"
+        }
+    }, {
+        "values": {
+            "title": "## 更高的技术要求",
+            "content": "* CSS 3、Canvas、SVG 图形学\n" +
+                    "* IndexedDB 数据库技术\n" +
+                    "* TypedArray 二进制数据处理\n" +
+                    "* 设计和前后端技术更深度的融合\n" +
+                    "* ……"
+        }
+    }, {
+        "values": {
+            "title": "## 构建HTML5的产业",
+            "content": "从底层规范到上层建筑的积累和完善\n\n" +
+                    "* W3C Web Standard / Browser ***\n" +
+                    "* Libs **\n" +
+                    "* Framework **\n" +
+                    "* App *\n" +
+                    "* Game *\n" +
+                    "* OS？\n\n" +
+                    "与其他领域的横向发展和融合"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# HTML5所处的环境",
+            "content": "特点决定地位"
+        }
+    }, {
+        "values": {
+            "title": "## HTML5所处的环境",
+            "content": "* 优势\n" +
+                    "  * 跨平台\n" +
+                    "  * 快速实现\n"
+        }
+    }, {
+        "values": {
+            "title": "## HTML5所处的环境",
+            "content": "* 劣势\n" +
+                    "  * 性能\n" +
+                    "  * 功能\n" +
+                    "  * 不成熟\n" +
+                    "  * 浏览器支持程度"
+        }
+    }, {
+        "values": {
+            "title": "## HTML5所处的环境",
+            "content": "* 劣势的矛盾较为突显\n" +
+                    "  * 尚无法成为主角\n" +
+                    "  * 多配合传统开发用\n" +
+                    "* 这一现状的改变，需要逐一化解上述问题\n" +
+                    "  * 时间\n" +
+                    "  * 大家的共同努力"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# THE END",
+            "content": "谢谢大家"
+        }
+    }]
+}

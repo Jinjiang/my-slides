@@ -1,0 +1,426 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_horizontal_3d",
+        "layout": "layout_default"
+    },
+    "slides": [{
+        "layout": "layout_title",
+        "values": {
+            "title": "# HTML5中的文件处理",
+            "content": "赵锦江  \nHTML5梦工场 成都站  \n2012-05-19"
+        }
+    }, {
+        "layout": "layout_default",
+        "transition": "transition_vertical_3d",
+        "values": {
+            "title": "## 自我介绍",
+            "content": "* 赵锦江([@勾三股四](http://weibo.com/mx006 ))\n* Tags: maxthon/w3c/f2e/music/football\n* QQ: 110698041\n* E/M: zhaojinjiang@yahoo.com.cn\n* Blog: [http://jiongks.name/](http://jiongks.name/)"
+        }
+    }, {
+        "values": {
+            "title": "## 主要内容",
+            "content": "* File API\n" +
+                    "* File Writer API\n" +
+                    "* File System API"
+        }
+    }, {
+        "values": {
+            "title": "## 解决网页开发中的困惑",
+            "content": "* 上传照片之前在本地预览图片\n" +
+                    "* 本地存储大量数据\n" +
+                    "* ……"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# File API",
+            "content": "所有文件操作的基础"
+        }
+    }, {
+        "values": {
+            "title": "## File接口(继承自Blob接口)",
+            "content": "* 一个`Blob`对象代表一段二进制数据，我们可以对其进行长度获取、数据切割和截断等操作\n" +
+                    "* 一个`File`对象可以代表一个文件，除了上述操作，我们还可以对`File`对象进行文件名、修改时间的获取\n" +
+                    "* 不能读/写文件的具体内容，这需要其它接口的配合"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(一)",
+            "content": "    /* Blob接口 */\n" +
+                "    blob.size // 只读特性，数据的字节数\n" +
+                "    blob.type // 只读属性，数据的MIME类型\n" +
+                "    blob.slice(start, end) // 将当前文件切割并将结果返回\n" +
+                "    \n" +
+                "    /* File接口 */\n" +
+                "    file.size // 继承自Blob，意义同上\n" +
+                "    file.slice(start, end) // 继承自Blob，意义同上\n" +
+                "    file.name // 只读属性，文件名\n" +
+                "    file.type // 只读属性，文件的MIME类型\n" +
+                "    file.lastModifiedDate // 只读属性，文件的上次修改日期"
+        }
+    }, {
+        "values": {
+            "title": "## FileList接口",
+            "content": "* 装载`File`对象的容器，只读，具有类似数组的读取方法\n" +
+                    "* 目前用到`FileList`的地方是`<input type=\"file\">`对象的`files`特性\n" +
+                    "* 对于一般的`<input type=\"file\">`对象，`files`最多只含一个元素\n" +
+                    "* 对于`<input type=\"file\" multiple>`来说，`files`可以有多个元素"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(二)",
+            "content": "    /* FileList接口 */\n" +
+                    "    var input = docment.querySelector('input[type=\"file\"]');\n" +
+                    "    input.onchange = function () {\n" +
+                    "        var fileList = this.files;\n" +
+                    "        for (var i in fileList.length; i++) {\n" +
+                    "            var file = fileList[i];\n" +
+                    "            ...\n" +
+                    "        }\n" +
+                    "    }"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# FileReader API",
+            "content": "读取文件内容"
+        }
+    }, {
+        "values": {
+            "title": "## FileReader接口",
+            "content": "* 用来读取文件内容\n" +
+                    "* 提供同步和异步两种方式，一般选用异步方式\n" +
+                    "* 同步方式多用在`WebWorker`之中\n" +
+                    "* 可选的读取格式有文本、`ArrayBuffer`、二进制串、`DataURL`等\n" +
+                    "* 可以指定编码格式进行文本格式的读取\n" +
+                    "* 可以方便的获取读取操作的状态和进度"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(三)",
+            "content": "    var reader = new FileReader();\n" +
+                    "    \n" +
+                    "    reader.readAsArrayBuffer(blob/file) // 以ArrayBuffer格式读取文件内容\n" +
+                    "    reader.readAsBinaryString(blob/file) // 以二进制格式读取文件内容(该方法已不推荐使用)\n" +
+                    "    reader.readAsText(file, [encoding]) // 以文本(及字符串)格式读取文件内容，并且可以强制选择文件编码\n" +
+                    "    reader.readAsDataURL(file) // 以DataURL格式读取文件内容\n" +
+                    "    reader.abort() // 终止读取操作\n" +
+                    "    \n" +
+                    "    reader.onloadstart // 读取操作开始时触发\n" +
+                    "    reader.onload // 读取操作成功时触发\n" +
+                    "    reader.onloadend // 读取操作完成时触发(不论成功还是失败)\n" +
+                    "    reader.onprogress // 读取操作过程中触发(event.loaded/event.total)\n" +
+                    "    reader.onabort // 读取操作被中断时触发\n" +
+                    "    reader.onerror // 读取操作失败时触发\n" +
+                    "    \n" +
+                    "    reader.result // 读取的结果(二进制、ArrayBuffer、文本或DataURL格式)\n" +
+                    "    reader.readyState // 读取操作的状态(EMPTY、LOADING、DONE)"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# demo演示1",
+            "content": "批量去掉UTF-8文本文件的BOM头 [link](/demos/files/)"
+        }
+    }, {
+        "values": {
+            "title": "## demo演示1主要代码",
+            "content": "    var input = document.querySelector('input[type=\"file\"]');\n" +
+                    "    var files = input.files;\n" +
+                    "    \n" +
+                    "    for (var i = 0; i < files.length; i++) {\n" +
+                    "        var file = files[i];\n" +
+                    "        var result = file.slice(3, file.size); // 用slice方法去掉开头的3个字节\n" +
+                    "        var reader = new FileReader(); // 新建一个FileReader类型的对象\n" +
+                    "        reader.readAsText(file, 'utf-8'); // 按文本格式读取file\n" +
+                    "        reader.onloadend = function (e) { // 绑定读取操作完成的事件\n" +
+                    "            console.log(reader.result); // 取得读取结果并输出\n" +
+                    "        };\n" +
+                    "    }"
+        }
+    }, {
+        "values": {
+            "title": "## 参考资料",
+            "content": "* [http://www.w3.org/TR/FileAPI/](http://www.w3.org/TR/FileAPI/)\n" +
+                    "* [http://www.w3.org/TR/progress-events/](http://www.w3.org/TR/progress-events/)"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# FileWriter API",
+            "content": "写入文件内容"
+        }
+    }, {
+        "values": {
+            "title": "## BlobBuilder接口",
+            "content": "* 允许填入各种格式的内容生成`Blob`对象\n" +
+                    "* 允许的写入格式有`ArrayBuffer`、字符串、`Blob`对象等\n" +
+                    "* 写入字符串时可以选择以特定的编码格式写入"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(四)",
+            "content": "    var blobBuilder = new BlobBuilder();\n" +
+                    "    \n" +
+                    "    blobBuilder.append(text[, endings]) // 放入文本数据\n" +
+                    "    blobBuilder.append(data) // 放入数据(Blob或ArrayBuffer)\n" +
+                    "    \n" +
+                    "    var result = blobBuilder.getBlob([contentType]) // 返回目前已放入的所有Blob数据构成的对象"
+        }
+    }, {
+        "values": {
+            "title": "## FileWriter接口",
+            "content": "* 用来写入文件内容\n" +
+                    "* 文件的来历不明，不在接口中涉及\n" +
+                    "* 提供同步和异步两种方式，一般选用异步方式\n" +
+                    "* 同步方式多用在`WebWorker`之中\n" +
+                    "* 可选的写入格式有文本、`ArrayBuffer`、二进制串、`DataURL`等\n" +
+                    "* 可以指定编码格式进行文本格式的写入\n" +
+                    "* 可以方便的获取读取操作的状态和进度"
+        }
+    }, {
+        "values": {
+            "title": "## FileSaver接口",
+            "content": "* `FileWriter`接口继承于此\n" +
+                    "* 不关心写入目标，也不关心写入内容\n" +
+                    "* 只关心写入进度和状态"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(五)",
+            "content": "    function write(writer) {\n" +
+                    "        writer.position // 当前写入操作所处的位置\n" +
+                    "        writer.length // 文件长度(或在无权读取文件信息的情况下返回已写入的长度)\n" +
+                    "        writer.write(blob) // 在position处写入blob数据\n" +
+                    "        writer.seek(offset) // 设置position属性为offset\n" +
+                    "        writer.truncate(size) // 在size处截断文件\n" +
+                    "    \n" +
+                    "        writer.abort() // 中断保存操作, 继承自FileSaver\n" +
+                    "        writer.readyState // 保存工作的状态(DONE、INIT、WRITING), 继承自FileSaver\n" +
+                    "        writer.error // 最后一次出错的错误信息, 继承自FileSaver\n" +
+                    "    \n" +
+                    "        writer.onwritestart // 写入操作开始时触发, 继承自FileSaver\n" +
+                    "        writer.onwrite // 写入操作成功时触发, 继承自FileSaver\n" +
+                    "        writer.onwriteend // 写入操作完成时触发(不管成功还是失败), 继承自FileSaver\n" +
+                    "        writer.onprogress // 写入操作过程中触发, 继承自FileSaver\n" +
+                    "        writer.onabort // 写入操作被中断时触发, 继承自FileSaver\n" +
+                    "        writer.onerror // 写入操作失败时触发, 继承自FileSaver\n" +
+                    "    }"
+        }
+    }, {
+        "values": {
+            "title": "## 参考资料",
+            "content": "* [http://www.w3.org/TR/file-writer-api/](http://www.w3.org/TR/file-writer-api/)"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# Blob URL API",
+            "content": "让文件可以被浏览器访问"
+        }
+    }, {
+        "values": {
+            "title": "## URL接口",
+            "content": "* 为`File`/`Blob`对象提供`URL`访问方式\n" +
+                    "* url创建之后，内容会被放在内存中\n" +
+                    "* 如果url不再需要，需要手动回收内存\n" +
+                    "* 该url在同域页面内访问有效\n" +
+                    "* 适合创建一个图片文件，然后用该url赋值给`<img>`的`src`特性"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(六)",
+            "content": "    // 已知file为一个图形文件，img为一个网页上的<img>\n" +
+                    "    var url = window.URL. createObjectURL(file);\n" +
+                    "    img.src = url;\n" +
+                    "    img.onload = function (e) {\n" +
+                    "        window.URL.revokeBlobURL(url);\n" +
+                    "    };"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# demo演示2",
+            "content": "创建一个css文件改变当前网页样式 [link](/demos/files/)"
+        }
+    }, {
+        "values": {
+            "title": "## demo演示2主要代码",
+            "content": "    var blobBuilder = new BlobBuilder();\n" +
+                    "    blobBuilder.append(cssText);\n" +
+                    "    \n" +
+                    "    var blob = blobBuilder.getBlob('text/plain');\n" +
+                    "    var url = window.URL.createObjectURL(blob);\n" +
+                    "    \n" +
+                    "    var link = document.createElement('link');\n" +
+                    "    link.setAttribute('rel', 'stylesheet');\n" +
+                    "    link.href = url;\n" +
+                    "    document.head.appendChild(link);"
+        }
+    }, {
+        "values": {
+            "title": "## 参考资料",
+            "content": "* [http://www.w3.org/TR/FileAPI/](http://www.w3.org/TR/FileAPI/)"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# FileSystem API",
+            "content": "本地文件系统"
+        }
+    }, {
+        "values": {
+            "title": "## FileSystem API简介",
+            "content": "* 本地存取文件的系统\n" +
+                    "* 遵循同源策略，每个域名相互隔离\n" +
+                    "* 可以理解为给每个域名分配了一块5MB的虚拟硬盘\n" +
+                    "* 同样的，大部分接口分为同步和异步两种类型"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "## 接口一览",
+            "content": "![](images/fsapi.jpg)"
+        }
+    }, {
+        "values": {
+            "title": "## 入口代码",
+            "content": "    window.requestFileSystem(TEMPORARY, 1024*1024, function (fs) {\n" +
+                    "        var root = fs.root;\n" +
+                    "        // TODO root\n" +
+                    "    });\n" +
+                    "    \n" +
+                    "    window.resolveLocalFileSystemURL(url, function (entry) {\n" +
+                    "       // TODO entry\n" +
+                    "    });"
+        }
+    }, {
+        "values": {
+            "title": "## FileEntry和File",
+            "content": "我们把文件系统中的每个文件或文件夹都是一个“条目”(`Entry`)，`FileEntry`对象和`DirectoryEntry`对象都是`Entry`对象。条目对象的接口大多都跟文件具体内容和具体读写操作无关，但却是这些读写操作和内容处理的入口。"
+        }
+    }, {
+        "values": {
+            "title": "## 存取文件",
+            "content": "* 写入文件时会结合`FileWriter`\n" +
+                    "* 读取文件时会结合`FileReader`"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(七)",
+            "content": "    entry.file(function (file) { // 参数是一个file对象\n" +
+"        var reader = new FileReader(); // 得到FileReader对象\n" +
+"        // TODO\n" +
+"    });\n" +
+"    \n" +
+"    entry.createWriter(function (writer) { // 参数是一个FileWriter对象\n" +
+"        // TODO\n" +
+"    });"
+        }
+    }, {
+        "values": {
+            "title": "## URL和FileEntry相互转换",
+            "content": "* 和之前的把`Blob`转换为url的目的类似\n" +
+                    "* 可以通过url方式，方便在网页中获取取文件系统中的内容"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(八)",
+            "content": "    // entry转为url\n" +
+"    var url = entry.toURL();\n" +
+"    \n" +
+"    // url转为entry\n" +
+"    window.resolveLocalFileSystemURL(url, function (entry) {\n" +
+"        // TODO\n" +
+"    });"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# demo演示3",
+            "content": "资源管理器 [link](http://superwunc.github.com/HTML5-FileSystem-Demo/)"
+        }
+    }, {
+        "values": {
+            "title": "## 参考资料",
+            "content": "* [http://www.w3.org/TR/file-system-api/](http://www.w3.org/TR/file-system-api/)"
+        }
+    }, {
+        "layout": "layout_title",
+        "values": {
+            "title": "# 插花：TypedArray",
+            "content": "更友好的二进制数据操作"
+        }
+    }, {
+        "values": {
+            "title": "## 原理介绍",
+            "content": "TypedArray的大概原理就是以charCode数组的形式，把一个二进制文件进行分解和体现。而数字进制有8、16、32、64这么几种。"
+        }
+    }, {
+        "values": {
+            "title": "## TypedArray系列接口",
+            "content": "* Int8Array         1B\n* Uint8Array        1B\n* Uint8ClampedArray 1B\n* Int16Array        2B\n* Uint16Array       2B\n* Int32Array        4B\n* Uint32Array       4B\n* Float32Array      4B\n* Float64Array      8B"
+        }
+    }, {
+        "values": {
+            "title": "## 代码示例(九)",
+            "content": "    arrayBuffer.BYTES_PER_ELEMENT // 常量，当前单位字节数\n" +
+"    \n" +
+"    arrayBuffer.length; // 只读，长度\n" +
+"    \n" +
+"    arrayBuffer.get(index); // 数组取值\n" +
+"    arrayBuffer.set(index, value); // 数组赋值\n" +
+"    arrayBuffer[index]; // 数组存取值\n" +
+"    \n" +
+"    arrayBuffer.set(array[, offset]); // 设置数据\n" +
+"    arrayBuffer.subarray(begin[, end]); // 截取其中一部分"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# demo演示4",
+            "content": "读取网站的favicon [link](/demos/files/)"
+        }
+    }, {
+        "values": {
+            "title": "## demo演示4主要代码",
+            "content": "    // 先读取数据\n" +
+"    var a = new XMLHttpRequest;\n" +
+"    a.open('GET', '/favicon.ico');\n" +
+"    a.responseType = 'arraybuffer';\n" +
+"    a.send();\n" +
+"    \n" +
+"    // 过一段时间之后执行下面的代码展示数据\n" +
+"    var b = new Int16Array(a.response);\n" +
+"    console.log(b);"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# demo演示5",
+            "content": "zip.js 用js完成zip压缩 [link](http://gildas-lormeau.github.com/zip.js/)"
+        }
+    }, {
+        "values": {
+            "title": "## 参考资料",
+            "content": "* [http://www.khronos.org/registry/typedarray/specs/latest/](http://www.khronos.org/registry/typedarray/specs/latest/)"
+        }
+    }, {
+        "values": {
+            "title": "## Can I Use?",
+            "content": "* [http://caniuse.com/](http://caniuse.com/)\n" +
+"* [http://caniuse.com/fileapi](http://caniuse.com/fileapi)\n" +
+"* [http://caniuse.com/filereader](http://caniuse.com/filereader)\n" +
+"* [http://caniuse.com/filesystem](http://caniuse.com/filesystem)\n" +
+"* [http://caniuse.com/bloburls](http://caniuse.com/bloburls)\n" +
+"* [http://caniuse.com/typedarrays](http://caniuse.com/typedarrays)\n" +
+"* [http://caniuse.com/xhr2](http://caniuse.com/xhr2)"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# THE END",
+            "content": "谢谢大家"
+        }
+    }]
+}

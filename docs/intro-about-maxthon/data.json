@@ -1,0 +1,146 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_zoomout",
+        "layout": "layout_default",
+        "theme": "theme_maxthon"
+    },
+    "slides": [
+        {
+            "values": {
+                "content": "Jinjiang Zhao  \nW3C 2012 AC Meeting",
+                "title": "# Intro About Maxthon"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "transition": "transition_horizontal_3d",
+            "values": {
+                "content": "### Jinjiang Zhao\n\n" +
+                        "* You can call me __Jinks__\n" +
+                        "* Start working in Maxthon from 2007\n" +
+                        "* Front-end Dev. Manager\n" +
+                        "* 27 years old",
+                "title": "# myself"
+            },
+            "layout": "layout_personal"
+        },
+        {
+            "values": {
+                "content": "China Headquarters & US Office",
+                "picture": "images/map.png",
+                "title": "## Maxthon"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "via [http://evolutionofweb.appspot.com/](http://evolutionofweb.appspot.com/)",
+                "picture": "images/history.png",
+                "title": "## A 9 Years Old Browser Comapny"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "### Lead the trend in China\n\n" +
+                        "* Multi-tab browsing\n" +
+                        "* Online services in browser\n" +
+                        "  * passport/favorites/feeds\n" +
+                        "  * memos/auto-fills/...\n" +
+                        "* Browser core development\n" +
+                        "* and ...",
+                "title": "## We Just Focus on Browser"
+            },
+            "extra": [
+                {
+                    "value": "![](images/maxthon3-preview.png)",
+                    "position": {
+                        "left": "600px",
+                        "top": "200px",
+                    },
+                    "style": {
+                    },
+                    "inner_style": {
+                        "img": {
+                            "width": "320px"
+                        }
+                    }
+                },
+                {
+                    "value": "![](images/online-services.png)",
+                    "position": {
+                        "left": "700px",
+                        "top": "300px",
+                    },
+                    "style": {
+                    },
+                    "inner_style": {
+                        "img": {
+                            "width": "240px"
+                        }
+                    }
+                },
+            ]
+        },
+        {
+            "values": {
+                "content": "EVERY website works on Maxthon  \n(we are not dual-core cpu)",
+                "picture": "images/dual-core.png",
+                "title": "## First Dual-Core Browser"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "We do more effort on multi-media decoding & graphic accelerations",
+                "picture": "images/html5-test.png",
+                "title": "## The World Highest HTML5 Scores"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "We take more care about security and privacy",
+                "picture": "images/do-not-track.png",
+                "title": "## First DoNotTrack Browser in China"
+            },
+            "layout": "layout_picture",
+            "extra": [
+                {
+                    "value": "",
+                    "position": {
+                        "left": "52%",
+                        "top": "255px",
+                        "width": "220px",
+                        "height": "70px"
+                    },
+                    "style": {
+                        "border": "3px #e36c09 solid",
+                        "border-radius": "5px"
+                    },
+                    "inner_style": {}
+                }
+            ]
+        },
+        {
+            "values": {
+                "content": "### We hope to do more contributions to web standard in the future\n\n" +
+                        "* With an open mind to learn\n" +
+                        "* More promotions in China\n" +
+                        "* More participations in HTML5 and Tracking Protection\n" +
+                        "* Anyway, we are very glad to join here.",
+                "title": "## Maxthon in W3C"
+            }
+        },
+        {
+            "transition": "transition_static",
+            "values": {
+                "content": "[http://www.maxthon.cn/](http://www.maxthon.cn/)  \n" +
+                        "[jinks@maxthon.net](mailto:jinks@maxthon.net)",
+                "title": "## THANKS"
+            },
+            "layout": "layout_subtitle"
+        }
+    ],
+    "theme": "blank"
+}
