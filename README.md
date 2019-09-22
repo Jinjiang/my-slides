@@ -38,9 +38,9 @@ press <kbd label="Arrow Right">→</kbd> to see...
 
 - [由 Weex 谈品牌经营心得](weex-opensource-branding) <small>云栖在线峰会, 2017-03-01</small>
 - [Weex vs. Web](weex-web) <small>WeexConf II, Hangzhou, 2017-01-12</small>
-- [Weex 开源之路](weex-osc2016) <small>源创会, Hangzhou, 2016-12-04</small>
 - [移动开发与 Weex 的改变和被改变](weex-osc2016-beijing)
-  - <small>源创会, Beijing, 2016-08-13</small>
+  - <small>源创会, Beijing, 2016-12-04</small>
+- [Weex 开源之路](weex-osc2016) <small>源创会, Hangzhou, 2016-08-13</small>
 
 ----
 
