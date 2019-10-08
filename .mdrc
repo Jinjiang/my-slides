@@ -1,0 +1,20 @@
+{
+  "output": "docs",
+  "base": "slides",
+  "ignore": ["LICENSE", "slides"],
+  "static": [
+    "data",
+    "player",
+    "example",
+    "date-in-web",
+    "files-in-html5",
+    "how-to-build-html5-slides",
+    "intro-about-maxthon",
+    "learning-git",
+    "my-view-of-html5",
+    "new-generated-html5-ui",
+    "node-js-practice",
+    "source-map-intro",
+    "think-about-webapp-layout"
+  ]
+}
