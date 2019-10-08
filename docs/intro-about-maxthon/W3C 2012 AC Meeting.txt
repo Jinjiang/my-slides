@@ -1,0 +1,71 @@
+W3C 2012 AC Meeting
+
+
+Intro Day
+
+
+Steve Holbrook (IBM)
+
+Getting info out
+W3C newsletter subscriptions
+    Those interested in tracking, subscribe
+Internal email list: XMLStds
+
+Determing if we join
+3-Levels of authofirzation
+    Local Management
+    Software Technology Standards Council
+    Standards Membership & Licensing Board
+
+IBM Patents Standards
+
+RAND vs RF ?
+
+Determining IBM position
+
+Whoever joins, has same problem...
+How can I prepresent 400,000 people?
+Form internal interest lists
+    Email, meetings, etc
+
+Defending Membershiop
+Benefit
+    info about key standards
+    ability to shape standards
+Who pays
+    IBM centrtal standards organization
+    Need testimonials about benefits
+
+
+How to succeed in W3C Mark Vickers Comcast Corporation
+
+What is your agenda?
+What is the different between W3C with you and without you?
+    Modify a developing spec (bug report ...)
+    start a new spec / activity
+    build reqirements for you industry
+    make broad changes across many specs
+    change the way the W3C does business
+
+Set a W3C agenda
+    build internal team of agenda managers & depandents
+    set goals
+    join appropriate groups
+Work as a Team
+    identify partner members & other key menebers wrt agenda
+    work as teams
+    bring in new W3C members
+Measure your progress
+Be ready for new agendas
+    Tracking Protection WG
+
+
+Asian Members' Viewpoint
+
+Break the language barrier
+Prepare money to join face-to-face meetings
+Encourage your co-workers to be active participants
+Allow flexible working hours to your co-workers
+Foster W3C activity in your company and country
+
+

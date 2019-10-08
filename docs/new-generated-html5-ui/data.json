@@ -1,0 +1,845 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_metro",
+        "layout": "layout_default"
+    },
+    "slides": [
+        {
+            "values": {
+                "content": "HTML5研究小组 赵锦江  \n" +
+                        "于 Happy Elements 工程师年会  \n" +
+                        "2011-07-15",
+                "title": "# HTML5的视觉方案技及其术简介"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "transition": "transition_vertical_3d",
+            "values": {
+                "content": "### 赵锦江(勾三股四)\n" +
+                        "* Tags: mhtml5/maxthon/f2e/music/football\n" +
+                        "* QQ: 110698041\n" +
+                        "* E/M: zhaojinjiang@yahoo.com.cn\n" +
+                        "* Blog: [http://jiongks.name/](http://jiongks.name/)\n" +
+                        "* Weibo: [http://weibo.com/mx006](http://weibo.com/mx006)",
+                "title": "## 自我介绍"
+            }
+        },
+        {
+            "values": {
+                "content": "* 传统网页视觉体系介绍\n" +
+                        "* HTML5带来新的选择 (`Canvas` / `CSS 3` / `SVG`)\n" +
+                        "* 技术介绍\n" +
+                        "* 优劣对比\n" +
+                        "* 实例展示\n" +
+                        "* 修炼之道",
+                "title": "## 主题概要"
+            }
+        },
+        {
+            "values": {
+                "content": "Web Page → Web App",
+                "title": "# 传统网页"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "所以我们从游戏开始谈起……",
+                "title": "# 由于贵公司是游戏公司"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "### 文字游戏\n\n" +
+                        "* [http://www.ssiddharth.com/envato/jquizzy/jquizzy.htm](http://www.ssiddharth.com/envato/jquizzy/jquizzy.htm)\n\n" +
+                        "### 升级版的文字游戏：“字符游戏”\n\n" +
+                        "符号版的“俄罗斯方块”  \n" +
+                        "* [http://jinjiang.github.com/demos/tetris/](http://jinjiang.github.com/demos/tetris/)\n\n" +
+                        "接下来我们看看传统网页是什么样子的，如何衍进的？",
+                "title": "## 传统网页中的“游戏”？"
+            }
+        },
+        {
+            "values": {
+                "content": "* 大标题、小标题\n" +
+                        "* 段落、列表\n" +
+                        "* 多媒体内容(插图/音频/视频)、表格\n" +
+                        "* 加粗、斜体、下划线、角标\n" +
+                        "* 特殊效果：字号、颜色、背景、跑马灯",
+                "title": "## 传统文档中的元素"
+            }
+        },
+        {
+            "values": {
+                "content": "* 书签、链接：建立章节和文档间的联系\n" +
+                        "* 表单：最早的交互",
+                "title": "## 网页的亮点元素"
+            }
+        },
+        {
+            "values": {
+                "content": "### 样式\n\n" +
+                        "* 边框、边距\n" +
+                        "* 特殊文字效果\n" +
+                        "* 主题、皮肤的概念陆续出现\n\n" +
+                        "### 版式\n\n" +
+                        "* 文档流布局(横向布局)\n" +
+                        "* 浮动布局(纵向布局)\n" +
+                        "* 叠层布局(自由布局)\n" +
+                        "* 模板的概念陆续出现\n\n" +
+                        "网页不再只是“在线版Word文档”了",
+                "title": "## 更多的样式和版式 (CSS)"
+            }
+        },
+        {
+            "values": {
+                "content": "* 管理窗口状态(window/location/screen/history)\n" +
+                        "* 管理文档内容(dom)\n" +
+                        "* 管理界面样式(style)\n" +
+                        "* 管理界面交互(events) 设备：鼠标、键盘\n" +
+                        "* 管理表单控件(form)\n" +
+                        "* 管理用户数据(cookie)",
+                "title": "## 配套的交互开发 (JavaScript)"
+            }
+        },
+        {
+            "values": {
+                "content": "* 链接逐渐变为按钮\n" +
+                        "* 表单提交逐渐变为Ajax Request\n" +
+                        "* 站点逐渐变为一个或几个页面",
+                "title": "## 更多的控制器 (Ajax)"
+            }
+        },
+        {
+            "values": {
+                "content": "* Flash、Java、类似的还有Silverlight\n" +
+                        "* 音频视频解码、数据加密、本地存储、高级网络通信、高级图像处理等\n" +
+                        "* 视频播放、网上银行、大量网页游戏\n" +
+                        "* 复制到剪贴板",
+                "title": "## 各类插件飘过……"
+            }
+        },
+        {
+            "values": {
+                "content": "贪婪的人类啊！",
+                "title": "# 终于……"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "* 语义增强 (新增语义化标记/表单扩充/更多输入设备匹配/微格式)\n" +
+                        "* 多媒体增强 (视频/音频/编码格式)\n" +
+                        "* 通信连接增强 (多进程/Socket/消息提示器)\n" +
+                        "* 设备支持增强 (原生拖拽/文件系统管理/地理位置信息)\n" +
+                        "* 样式、特效增强：稍后详细介绍\n" +
+                        "* 数据管理增强 (本地缓存/本地数据存储/本地数据库)\n" +
+                        "* 性能功能增强 (部分属性、接口的优化和改进)",
+                "title": "## HTML5横空出世 (Web App)"
+            }
+        },
+        {
+            "values": {
+                "content": "大量应用横空出世！  \n" +
+                        "Web Game 首当其冲！",
+                "title": "# Web真正有了应用的感觉"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "扯了半天跟游戏没有关系的东东，不知道大家是不是快睡着了……  \n" +
+                        "诸位游戏开发工作者是怎么看待Web的呢？",
+                "title": "## 以上就是一个前端开发工作者眼中的Web世界"
+            }
+        },
+        {
+            "values": {
+                "content": "Canvas / CSS 3 / SVG",
+                "title": "# HTML5中的视觉新选择"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "content": "游戏开发者的最爱！",
+                "title": "# CANVAS"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "title": "# 技术介绍和代码实现"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "demo: [canvas-01.html](/demos/canvas-css-svg/canvas-01.html)\n\n" +
+                        "    <html>\n" +
+                        "     <head>\n" +
+                        "      <script type=\"application/javascript\">\n" +
+                        "    function draw() {\n" +
+                        "     var canvas = document.getElementById(\"canvas\");\n" +
+                        "     var ctx = canvas.getContext(\"2d\");\n" +
+                        "    \n" +
+                        "     ctx.fillStyle = \"rgb(200,0,0)\";\n" +
+                        "     ctx.fillRect (10, 10, 55, 50);\n" +
+                        "    \n" +
+                        "     ctx.fillStyle = \"rgba(0, 0, 200, 0.5)\";\n" +
+                        "     ctx.fillRect (30, 30, 55, 50);\n" +
+                        "    }\n" +
+                        "      </script>\n" +
+                        "     </head>\n" +
+                        "     <body onload=\"draw()\">\n" +
+                        "       <canvas id=\"canvas\" width=\"300\" height=\"300\"></canvas>\n" +
+                        "     </body>\n" +
+                        "    </html>",
+                "title": "## 实例1：简单的框线绘制"
+            }
+        },
+        {
+            "values": {
+                "content": "demo: [canvas-02.html](/demos/canvas-css-svg/canvas-02.html)\n\n" +
+                        "    <html>\n" +
+                        "     <head>\n" +
+                        "      <script type=\"application/javascript\">\n" +
+                        "    function draw() {\n" +
+                        "      var canvas = document.getElementById(\"canvas\");\n" +
+                        "      var ctx = canvas.getContext(\"2d\");\n" +
+                        "    \n" +
+                        "      ctx.fillStyle = \"red\";\n" +
+                        "    \n" +
+                        "      ctx.beginPath();\n" +
+                        "      ctx.moveTo(30, 30);\n" +
+                        "      ctx.lineTo(150, 150);\n" +
+                        "      // was: ctx.quadraticCurveTo(60, 70, 70, 150); which is wrong.\n" +
+                        "      ctx.bezierCurveTo(60, 70, 60, 70, 70, 150); // <- this is right formula for the image on the right ->\n" +
+                        "      ctx.lineTo(30, 30);\n" +
+                        "      ctx.fill();\n" +
+                        "    }\n" +
+                        "       </script>\n" +
+                        "     </head>\n" +
+                        "     <body onload=\"draw()\">\n" +
+                        "       <canvas id=\"canvas\" width=\"300\" height=\"300\"></canvas>\n" +
+                        "     </body>\n" +
+                        "    </html>",
+                "title": "## 实例2：使用路径：二次曲线和贝塞尔曲线"
+            }
+        },
+        {
+            "values": {
+                "content": "demo: [canvas-03.html](/demos/canvas-css-svg/canvas-03.html)\n\n" +
+                        "    <html>\n" +
+                        "      <head>\n" +
+                        "       <script type=\"application/javascript\">\n" +
+                        "    function drawBowtie(ctx, fillStyle) {\n" +
+                        "    \n" +
+                        "      ctx.fillStyle = \"rgba(200,200,200,0.3)\";\n" +
+                        "      ctx.fillRect(-30, -30, 60, 60);\n" +
+                        "    \n" +
+                        "      ctx.fillStyle = fillStyle;\n" +
+                        "      ctx.globalAlpha = 1.0;\n" +
+                        "      ctx.beginPath();\n" +
+                        "      ctx.moveTo(25, 25);\n" +
+                        "      ctx.lineTo(-25, -25);\n" +
+                        "      ctx.lineTo(25, -25);\n" +
+                        "      ctx.lineTo(-25, 25);\n" +
+                        "      ctx.closePath();\n" +
+                        "      ctx.fill();\n" +
+                        "    }\n" +
+                        "    \n" +
+                        "    function dot(ctx) {\n" +
+                        "      ctx.save();\n" +
+                        "      ctx.fillStyle = \"black\";\n" +
+                        "      ctx.fillRect(-2, -2, 4, 4);\n" +
+                        "      ctx.restore();\n" +
+                        "    }\n" +
+                        "    \n" +
+                        "    function draw() {\n" +
+                        "      var canvas = document.getElementById(\"canvas\");\n" +
+                        "      var ctx = canvas.getContext(\"2d\");\n" +
+                        "    \n" +
+                        "      // note that all other translates are relative to this\n" +
+                        "      // one\n" +
+                        "      ctx.translate(45, 45);\n" +
+                        "      ctx.save();\n" +
+                        "      //ctx.translate(0, 0); // unnecessary\n" +
+                        "      drawBowtie(ctx, \"red\");\n" +
+                        "      dot(ctx);\n" +
+                        "      ctx.restore();\n" +
+                        "    \n" +
+                        "      ctx.save();\n" +
+                        "      ctx.translate(85, 0);\n" +
+                        "      ctx.rotate(45     Math.PI / 180);\n" +
+                        "      drawBowtie(ctx, \"green\");\n" +
+                        "      dot(ctx);\n" +
+                        "      ctx.restore();\n" +
+                        "    \n" +
+                        "      ctx.save();\n" +
+                        "      ctx.translate(0, 85);\n" +
+                        "      ctx.rotate(135     Math.PI / 180);\n" +
+                        "      drawBowtie(ctx, \"blue\");\n" +
+                        "      dot(ctx);\n" +
+                        "      ctx.restore();\n" +
+                        "    \n" +
+                        "      ctx.save();\n" +
+                        "      ctx.translate(85, 85);\n" +
+                        "      ctx.rotate(90     Math.PI / 180);\n" +
+                        "      drawBowtie(ctx, \"yellow\");\n" +
+                        "      dot(ctx);\n" +
+                        "      ctx.restore();\n" +
+                        "    }\n" +
+                        "       </script>\n" +
+                        "     </head>\n" +
+                        "     <body onload=\"draw()\">\n" +
+                        "       <canvas id=\"canvas\" width=\"300\" height=\"300\"></canvas>\n" +
+                        "     </body>\n" +
+                        "    </html>",
+                "title": "## 实例3：画布状态管理：记录和恢复"
+            }
+        },
+        {
+            "values": {
+                "content": "demo: [canvas-04.html](/demos/canvas-css-svg/canvas-04.html)\n\n" +
+                        "    function draw() {\n" +
+                        "      var ctx = document.getElementById('canvas').getContext('2d');\n" +
+                        "      var img = new Image();\n" +
+                        "      // Image File\n" +
+                        "      img.src = 'backdrop.png';\n" +
+                        "      // or Image DataURI\n" +
+                        "      // var img_src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';\n" +
+                        "      // img.src = img_src;\n" +
+                        "      img.onload = function(){\n" +
+                        "        ctx.drawImage(img,0,0);\n" +
+                        "        ctx.beginPath();\n" +
+                        "        ctx.moveTo(30,96);\n" +
+                        "        ctx.lineTo(70,66);\n" +
+                        "        ctx.lineTo(103,76);\n" +
+                        "        ctx.lineTo(170,15);\n" +
+                        "        ctx.stroke();\n" +
+                        "      }\n" +
+                        "    }",
+                "title": "## 实例4：导入位图：Image 文件 / DataURI"
+            }
+        },
+        {
+            "values": {
+                "content": "demo: [canvas-05.html](/demos/canvas-css-svg/canvas-05.html)\n\n" +
+                        "    function init() {\n" +
+                        "      clock();\n" +
+                        "      setInterval(clock,1000);\n" +
+                        "    }\n" +
+                        "    function clock(){\n" +
+                        "      var now = new Date();\n" +
+                        "      var ctx = document.getElementById('canvas').getContext('2d');\n" +
+                        "      ctx.save();\n" +
+                        "      ctx.clearRect(0,0,150,150);\n" +
+                        "      ctx.translate(75,75);\n" +
+                        "      ctx.scale(0.4,0.4);\n" +
+                        "      ctx.rotate(-Math.PI/2);\n" +
+                        "      ctx.strokeStyle = \"black\";\n" +
+                        "      ctx.fillStyle = \"white\";\n" +
+                        "      ctx.lineWidth = 8;\n" +
+                        "      ctx.lineCap = \"round\";\n" +
+                        "    \n" +
+                        "      // Hour marks\n" +
+                        "      ...\n" +
+                        "      // Minute marks\n" +
+                        "      ...\n" +
+                        "      \n" +
+                        "      var sec = now.getSeconds();\n" +
+                        "      var min = now.getMinutes();\n" +
+                        "      var hr  = now.getHours();\n" +
+                        "      hr = hr>=12 ? hr-12 : hr;\n" +
+                        "    \n" +
+                        "      ctx.fillStyle = \"black\";\n" +
+                        "    \n" +
+                        "      // write Hours\n" +
+                        "      ...\n" +
+                        "      // write Minutes\n" +
+                        "      ...\n" +
+                        "      // Write seconds\n" +
+                        "      ...\n" +
+                        "    \n" +
+                        "      ctx.beginPath();\n" +
+                        "      ctx.lineWidth = 14;\n" +
+                        "      ctx.strokeStyle = '#325FA2';\n" +
+                        "      ctx.arc(0,0,142,0,Math.PI*2,true);\n" +
+                        "      ctx.stroke();\n" +
+                        "    \n" +
+                        "      ctx.restore();\n" +
+                        "    }",
+                "title": "## 实例5：动画的做法：擦了画，画了擦"
+            }
+        },
+        {
+            "values": {
+                "content": "* 图像合成规则\n" +
+                        "* 框线边缘样式\n" +
+                        "* 文字绘制\n" +
+                        "* 画布变形\n" +
+                        "* 像素级操作",
+                "title": "## 其它细节"
+            }
+        },
+        {
+            "values": {
+                "content": "### 优点\n\n" +
+                        "* 符合传统游戏开发的习惯\n" +
+                        "* 执行效率高\n" +
+                        "* 效果绝对统一\n" +
+                        "* 可以进行像素级别的雕琢\n" +
+                        "* 开发级别非常底层，发挥空间很大",
+                "title": "## Canvas的特点"
+            }
+        },
+        {
+            "values": {
+                "content": "### 缺陷和其它不确定因素\n\n" +
+                        "* 事件判定的工作比较复杂，需要计算坐标\n" +
+                        "* 实现动画的工作比较繁琐，需要深入到每一帧\n" +
+                        "* 无法利用任何平台特性(表单控件、系统主题)\n" +
+                        "* 是一块真正的“布”",
+                "title": "## Canvas的特点 (续)"
+            },
+            "layout": "layout_default"
+        },
+        {
+            "values": {
+                "title": "# 自己动手丰衣足食"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "### 愤怒的小鸟\n\n" +
+                        "* [http://chrome.angrybirds.com/](http://chrome.angrybirds.com/)\n\n" +
+                        "### Canvas弹珠\n\n" +
+                        "* [http://ie.microsoft.com/testdrive/Graphics/CanvasPinball/](http://ie.microsoft.com/testdrive/Graphics/CanvasPinball/)\n\n" +
+                        "### 坦克大战\n\n" +
+                        "* [http://www.mhtml5.com/games/tank/](http://www.mhtml5.com/games/tank/)\n\n" +
+                        "### 书道\n\n" +
+                        "* [http://www.theshodo.com/Write](http://www.theshodo.com/Write)",
+                "title": "## 实例演示"
+            }
+        },
+        {
+            "values": {
+                "content": "### WebGL\n\n" +
+                        "* [https://developer.mozilla.org/en/WebGL](https://developer.mozilla.org/en/WebGL)\n\n" +
+                        "### MDC Canvas\n\n" +
+                        "* [https://developer.mozilla.org/en/HTML/Canvas](https://developer.mozilla.org/en/HTML/Canvas)\n\n" +
+                        "### Canvas手册\n\n" +
+                        "* [http://simon.html5.org/dump/html5-canvas-cheat-sheet.html](http://simon.html5.org/dump/html5-canvas-cheat-sheet.html)\n\n" +
+                        "Canvas实践机会不多，就简单介绍到这里吧，不敢再班门弄斧了……",
+                "title": "## 延伸阅读"
+            }
+        },
+        {
+            "values": {
+                "content": "前端开发的最爱！",
+                "title": "# CSS 3"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "title": "# 技术介绍和代码实现"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "[css-01.html](/demos/canvas-css-svg/css-01.html)\n\n    border-radius: 10px;",
+                "title": "## 圆角"
+            }
+        },
+        {
+            "values": {
+                "content": "[css-02.html](/demos/canvas-css-svg/css-02.html)\n\n" +
+                        "    background: gradient(linear, left top, left bottom, from(white), to(black), color-stop(0.5, yellow));\n" +
+                        "    background: gradient(radial, 200 150, 0, 200 150, 100, from(white), to(black));",
+                "title": "## 颜色渐变"
+            }
+        },
+        {
+            "values": {
+                "content": "[css-03.html](/demos/canvas-css-svg/css-03.html)\n\n" +
+                        "    background: url(logo.png) no-repeat left center, url(bg.png) repeat-x;",
+                "title": "## 多重背景"
+            }
+        },
+        {
+            "values": {
+                "content": "[css-04.html](/demos/canvas-css-svg/css-04.html)\n\n" +
+                        "    box-shadow: 2px 2px 4px blue;",
+                "title": "## 阴影"
+            }
+        },
+        {
+            "values": {
+                "content": "[css-05.html](/demos/canvas-css-svg/css-05.html)\n\n" +
+                        "    transform: translate(100px, 50px) scaleX(1.5) rotate(30deg);",
+                "title": "## 几何变换"
+            }
+        },
+        {
+            "values": {
+                "content": "[css-06.html](/demos/canvas-css-svg/css-06.html)\n\n" +
+                        "    transition: left 2s ease-in-out;",
+                "title": "## 渐进变换"
+            }
+        },
+        {
+            "values": {
+                "content": "[css-07.html](/demos/canvas-css-svg/css-07.html)\n\n" +
+                        "    animation-direction: alternate;",
+                "title": "## 动画"
+            }
+        },
+        {
+            "values": {
+                "content": "    input[type=\"radio\"] {...}\n" +
+                        "    tr:nth-child(even) {...}\n" +
+                        "    .panel:not(.shown) {...}\n\n" +
+                        "### The 30 CSS Selectors you Must Memorize\n\n" +
+                        "[http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/)",
+                "title": "## 选择器扩展 {}"
+            }
+        },
+        {
+            "values": {
+                "content": "    :after {content: \"xx\"; ... }\n" +
+                        "    :before {content: \"xx\"; ... }\n" +
+                        "    :first-letter {font-size: 200%;}",
+                "title": "## :伪元素"
+            }
+        },
+        {
+            "values": {
+                "content": "### 优点\n\n" +
+                        "* 符合传统Web前端工程师的习惯\n" +
+                        "* 尊重主流的网页设计风格和技术需求\n" +
+                        "* 有强大的交互机制\n" +
+                        "* 和网页元素完美结合，不影响语义\n" +
+                        "* 适合较为系统或简约的界面需求",
+                "title": "## CSS 3 的特点"
+            }
+        },
+        {
+            "values": {
+                "content": "### 缺陷和其它不确定因素\n\n" +
+                        "* 归根结底都是矩形变换\n" +
+                        "* 没有处理复杂光影效果的能力\n" +
+                        "* 部分效果需要取巧的方式来实现\n" +
+                        "* 运行效能尚不成熟\n" +
+                        "* 兼容问题阴魂不散",
+                "title": "## CSS 3 的特点 (续)"
+            },
+            "layout": "layout_default"
+        },
+        {
+            "values": {
+                "content": "### CSS 3 Heart\n\n" +
+                        "* [http://bulaoge.net/topic.blg?dmn=g3g4&tid=1968094](http://bulaoge.net/topic.blg?dmn=g3g4&tid=1968094)\n\n" +
+                        "### CSS 3 Logos\n\n" +
+                        "* 傲游: [http://blog.maxthon.cn/?p=1268](http://blog.maxthon.cn/?p=1268)\n" +
+                        "* 新浪: [http://blog.guojiawen.com/html/css3_icon.html](http://blog.guojiawen.com/html/css3_icon.html)\n" +
+                        "* 腾讯: [http://namepk.sinaapp.com/qq.html](http://namepk.sinaapp.com/qq.html)\n" +
+                        "* 百度: [http://www.startfeel.com/lab/css/baidu_logo.html](http://www.startfeel.com/lab/css/baidu_logo.html)\n" +
+                        "* 机器猫: [http://knb.im/css3/](http://knb.im/css3/)\n\n" +
+                        "### “2.5D”视觉效果\n\n" +
+                        "* [http://www.adanghome.com/js_demo/7/](http://www.adanghome.com/js_demo/7/)",
+                "title": "## 实例演示"
+            }
+        },
+        {
+            "values": {
+                "content": "* [http://css3.info/](http://css3.info/)\n" +
+                        "* [http://css-tricks.com/](http://css-tricks.com/)",
+                "title": "## 延伸阅读"
+            }
+        },
+        {
+            "values": {
+                "content": "期待重生！",
+                "title": "# SVG"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "title": "# 技术介绍和代码实现"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "[svg-01.svg](/demos/canvas-css-svg/svg-01.svg)\n\n" +
+                        "    <?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n" +
+                        "    <svg version=\"1.1\" baseProfile=\"full\" width=\"300\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <rect width=\"100%\" height=\"100%\" fill=\"red\" />\n" +
+                        "      <circle cx=\"150\" cy=\"100\" r=\"80\" fill=\"green\" />\n" +
+                        "      <text x=\"150\" y=\"125\" font-size=\"60\" text-anchor=\"middle\" fill=\"white\">SVG</text>\n" +
+                        "    </svg>",
+                "title": "## 实例1：一个简单的例子"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-02.svg](/demos/canvas-css-svg/svg-02.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200\" height=\"250\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <rect x=\"10\" y=\"10\" width=\"30\" height=\"30\" stroke=\"black\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <rect x=\"60\" y=\"10\" rx=\"10\" ry=\"10\" width=\"30\" height=\"30\" stroke=\"black\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <circle cx=\"25\" cy=\"75\" r=\"20\" stroke=\"red\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <ellipse cx=\"75\" cy=\"75\" rx=\"20\" ry=\"5\" stroke=\"red\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <line x1=\"10\" x2=\"50\" y1=\"110\" y2=\"150\" stroke=\"orange\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <polyline points=\"60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145\"\n" +
+                        "          stroke=\"orange\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <polygon points=\"50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180\"\n" +
+                        "          stroke=\"green\" fill=\"transparent\" stroke-width=\"5\"/>\n" +
+                        "      <path d=\"M20,230 Q40,205 50,230 T90,230\" fill=\"none\" stroke=\"blue\" stroke-width=\"5\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例2：各种简单的框线和图形"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-03.svg](/demos/canvas-css-svg/svg-03.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"190px\" height=\"160px\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <path d=\"M10 10 C 20 20, 40 20, 50 10\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M70 10 C 70 20, 120 20, 120 10\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M130 10 C 120 20, 180 20, 170 10\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M10 60 C 20 80, 40 80, 50 60\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M70 60 C 70 80, 110 80, 110 60\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M130 60 C 120 80, 180 80, 170 60\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M10 110 C 20 140, 40 140, 50 110\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M70 110 C 70 140, 110 140, 110 110\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "      <path d=\"M130 110 C 120 140, 180 140, 170 110\" stroke=\"black\" fill=\"transparent\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例3：贝塞尔曲线"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-04.svg](/demos/canvas-css-svg/svg-04.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"320px\" height=\"320px\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <path d=\"M10 315\n" +
+                        "          L 110 215\n" +
+                        "          A 30 50 0 0 1 162.55 162.45\n" +
+                        "          L 172.55 152.45\n" +
+                        "          A 30 50 -45 0 1 215.1 109.9\n" +
+                        "          L 315 10\" stroke=\"black\" fill=\"green\" stroke-width=\"2\" fill-opacity=\"0.5\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例4：二次曲线"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-05.svg](/demos/canvas-css-svg/svg-05.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"325px\" height=\"325px\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <path d=\"M80 80\n" +
+                        "          A 45 45, 0, 0, 0, 125 125\n" +
+                        "          L 125 80 Z\" fill=\"green\"/>\n" +
+                        "      <path d=\"M230 80\n" +
+                        "          A 45 45, 0, 1, 0, 275 125\n" +
+                        "          L 275 80 Z\" fill=\"red\"/>\n" +
+                        "      <path d=\"M80 230\n" +
+                        "          A 45 45, 0, 0, 1, 125 275\n" +
+                        "          L 125 230 Z\" fill=\"purple\"/>\n" +
+                        "      <path d=\"M230 230\n" +
+                        "          A 45 45, 0, 1, 1, 275 275\n" +
+                        "          L 275 230 Z\" fill=\"blue\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例5：二次曲线之二"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-06.svg](/demos/canvas-css-svg/svg-06.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200\" height=\"280\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n" +
+                        "      <rect x=\"10\" y=\"10\" width=\"100\" height=\"100\" stroke=\"blue\" fill=\"purple\"\n" +
+                        "          fill-opacity=\"0.5\" stroke-opacity=\"0.8\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例6：填充和描边"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-07.svg](/demos/canvas-css-svg/svg-07.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200px\" height=\"300px\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <line x1=\"40\" x2=\"120\" y1=\"20\" y2=\"20\" stroke=\"black\" stroke-width=\"20\" stroke-linecap=\"butt\"/>\n" +
+                        "      <line x1=\"40\" x2=\"120\" y1=\"60\" y2=\"60\" stroke=\"black\" stroke-width=\"20\" stroke-linecap=\"square\"/>\n" +
+                        "      <line x1=\"40\" x2=\"120\" y1=\"100\" y2=\"100\" stroke=\"black\" stroke-width=\"20\" stroke-linecap=\"round\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例7：框线边缘处理"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-08.svg](/demos/canvas-css-svg/svg-08.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200px\" height=\"300px\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+                        "      <path d=\"M 10 75 Q 50 10 100 75 T 190 75\" stroke=\"black\"\n" +
+                        "          stroke-linecap=\"round\" stroke-dasharray=\"5,10,5\" fill=\"none\"/>\n" +
+                        "      <path d=\"M 10 75 L 190 75\" stroke=\"red\"\n" +
+                        "          stroke-linecap=\"round\" stroke-width=\"1\" stroke-dasharray=\"5,5\" fill=\"none\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例8：绘制虚线"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-09.svg](/demos/canvas-css-svg/svg-09.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n" +
+                        "      <defs>\n" +
+                        "        <style type=\"text/css\"><![CDATA[\n" +
+                        "          #MyRect {\n" +
+                        "            stroke: black;\n" +
+                        "            fill: red;\n" +
+                        "          }\n" +
+                        "        ]]></style>\n" +
+                        "      </defs>\n" +
+                        "      <rect x=\"10\" height=\"180\" y=\"10\" width=\"180\" id=\"MyRect\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例9：CSS样式表"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-10.svg](/demos/canvas-css-svg/svg-10.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n" +
+                        "      <defs>\n" +
+                        "        <linearGradient id=\"Gradient1\">\n" +
+                        "          <stop offset=\"5%\" stop-color=\"white\"/>\n" +
+                        "          <stop offset=\"95%\" stop-color=\"blue\"/>\n" +
+                        "        </linearGradient>\n" +
+                        "        <linearGradient id=\"Gradient2\" x1=\"0\" x2=\"0\" y1=\"0\" y2=\"1\">\n" +
+                        "          <stop offset=\"5%\" stop-color=\"red\"/>\n" +
+                        "          <stop offset=\"95%\" stop-color=\"orange\"/>\n" +
+                        "        </linearGradient>\n" +
+                        "        <pattern id=\"Pattern\" x=\".05\" y=\".05\" width=\".25\" height=\".25\">\n" +
+                        "          <rect x=\"0\" y=\"0\" width=\"50\" height=\"50\" fill=\"skyblue\"/>\n" +
+                        "          <rect x=\"0\" y=\"0\" width=\"25\" height=\"25\" fill=\"url(#Gradient2)\"/>\n" +
+                        "          <circle cx=\"25\" cy=\"25\" r=\"20\" fill=\"url(#Gradient1)\" fill-opacity=\"0.5\"/>\n" +
+                        "        </pattern> \n" +
+                        "      </defs>\n" +
+                        "      <rect fill=\"url(#Pattern)\" stroke=\"black\" x=\"0\" y=\"0\" width=\"200\" height=\"200\"/>\n" +
+                        "    </svg>",
+                "title": "## 实例10：模式集成"
+            }
+        },
+        {
+            "values": {
+                "content": "[svg-11.svg](/demos/canvas-css-svg/svg-11.svg)\n\n" +
+                        "    <?xml version=\"1.0\" standalone=\"no\"?>\n" +
+                        "    <svg width=\"200\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n" +
+                        "      <g fill=\"red\">\n" +
+                        "        <rect x=\"0\" y=\"0\" width=\"50\" height=\"50\" />\n" +
+                        "        <rect x=\"100\" y=\"0\" width=\"50\" height=\"50\" />\n" +
+                        "      </g>\n" +
+                        "    </svg>",
+                "title": "## 实例11：元素集成"
+            }
+        },
+        {
+            "values": {
+                "content": "* 元素的层次控制\n" +
+                        "* 遮罩和过滤\n" +
+                        "* 几何变换\n" +
+                        "* 文字渲染",
+                "title": "## 其它细节"
+            }
+        },
+        {
+            "values": {
+                "content": "### 优点\n\n" +
+                        "* 基于矢量图和矢量变换\n" +
+                        "* 适用于相对静态的视觉内容\n" +
+                        "* 各种集成管理方式\n" +
+                        "* 全平台解决方案 (vml for IE)\n" +
+                        "* 处理不规则形状的元素\n" +
+                        "* 兼顾灵活度和前端开发的习惯",
+                "title": "## SVG的特点"
+            }
+        },
+        {
+            "values": {
+                "content": "### 缺陷和其它不确定因素\n\n" +
+                        "* 标记和属性都非常琐碎，不易于学习和记忆\n" +
+                        "* 必须严格遵循 xml 文件格式，代码健壮性不够\n" +
+                        "* 无法进行像素级编辑\n" +
+                        "* 同样存在不同平台和浏览器的细节绘制差异",
+                "title": "## SVG的特点 (续)"
+            },
+            "layout": "layout_default"
+        },
+        {
+            "values": {
+                "content": "### 直升机逃生\n\n" +
+                        "* [http://ie.microsoft.com/testdrive/Performance/Helicopter/Default.xhtml](http://ie.microsoft.com/testdrive/Performance/Helicopter/Default.xhtml)\n" +
+                        "\n" +
+                        "### SVG–oids\n\n" +
+                        "* [http://ie.microsoft.com/testdrive/Graphics/SVGoids/Default.xhtml](http://ie.microsoft.com/testdrive/Graphics/SVGoids/Default.xhtml)\n" +
+                        "\n" +
+                        "### gRapael报表\n\n" +
+                        "* [http://g.raphaeljs.com/piechart2.html](http://g.raphaeljs.com/piechart2.html)",
+                "title": "## 实例演示"
+            }
+        },
+        {
+            "values": {
+                "content": "* 《SVG开发实践》\n" +
+                        "* [http://raphaeljs.com/](http://raphaeljs.com/)\n" +
+                        "* [http://g.raphaeljs.com/](http://g.raphaeljs.com/)",
+                "title": "## 延伸阅读"
+            }
+        },
+        {
+            "values": {
+                "picture": "/slides/data/images/20120022025306.png",
+                "title": "## 总结"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "* Canvas方案：傲游3设置头像\n" +
+                        "* CSS方案：傲游账户中心设置头像  \n" +
+                        "[http://my.maxthon.cn/avatar.html](http://my.maxthon.cn/avatar.html)\n" +
+                        "* SVG方案：用Raphael实现的demo  \n" +
+                        "[svg-avatar.html](/demos/canvas-css-svg/svg-avatar.html)",
+                "title": "## 横向实例对比：头像编辑"
+            }
+        },
+        {
+            "values": {
+                "content": "### 部分代码片段引用自：\n\n" +
+                        "* MDC:  \n" +
+                        "[http://developer.mozilla.org/](http://developer.mozilla.org/)\n" +
+                        "* HTML5 Presentation:  \n" +
+                        "[http://slides.html5rocks.com/](http://slides.html5rocks.com/)",
+                "title": "## 引用说明"
+            }
+        },
+        {
+            "values": {
+                "content": "谢谢大家",
+                "title": "# THE END"
+            },
+            "layout": "layout_subtitle"
+        }
+    ],
+    "theme": "blank"
+}

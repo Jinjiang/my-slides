@@ -1,0 +1,133 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_horizontal_3d",
+        "layout": "layout_default"
+    },
+    "slides": [{
+        "layout": "layout_title",
+        "values": {
+            "title": "# 如何制作简易的HTML5幻灯片",
+            "content": "赵锦江  \nHTML5研究小组 北京站  \n2011-05-14"
+        }
+    }, {
+        "layout": "layout_default",
+        "transition": "transition_vertical_3d",
+        "values": {
+            "title": "## 自我介绍",
+            "content": "* 赵锦江(勾三股四)\n* Tags: maxthon/f2e/music/football\n* QQ: 110698041\n* E/M: zhaojinjiang@yahoo.com.cn\n* Blog: [http://jiongks.name/](http://jiongks.name/)"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## HTML5 幻灯片演示",
+            "content": "----\n### HTML5 Rocks Slides\n\n[http://slides.html5rocks.com/](http://slides.html5rocks.com/)\n\n----\n\n### S5: A Simple Standards-Based Slide Show System\n\n[http://meyerweb.com/eric/tools/s5/s5-intro.html](http://meyerweb.com/eric/tools/s5/s5-intro.html)\n\n----\n\n### CSSS: CSS-based SlideShow System\n\n[http://leaverou.me/csss/sample-slideshow.html](http://leaverou.me/csss/sample-slideshow.html)"
+        }
+    }, {
+        "layout": "layout_double",
+        "values": {
+            "title": "## 主要内容",
+            "content": "1. HTML5简简简介\n2. 我们该如何看待HTML5\n3. How HTML5? Why Slide Shows?\n4. HTML5幻灯片的制作过程\n5. 发散思维",
+            "content2": "* 前端vs前端工程师\n* 前端的发展和浏览器的发展\n* 功能点摘要\n* 结合代码讲解实现思路"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# 一、HTML5简简简介",
+            "content": "`HTML 5 === Web Application`"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# 二、我们该如何看待HTML5"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 前端 != 前端工程师",
+            "content": "----\n\n### 前端开发需要更广阔的技术视野\n\n而不仅仅是JS语言专家\n\n----\n\n### 前端开发中界面和交互所占的比例越来越小\n\n文件处理、图形处理、网络通信、数据库操作……\n\n----\n\n### 前端开发有了真正的开发的味道\n\n面向对象思想、数据结构与算法、编译原理……\n\n----\n\n### 面临严峻挑战，转变观念非常重要！\n\n前端工程师将无法胜任前端的工作  \n——这绝对不是危言耸听！"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 前端的发展和浏览器的发展",
+            "content": "* IE6 份额居高不下\n\n----\n\n* HTML5 对开发人员的帮助是直接的，对用户的帮助是间接的\n\n----\n\n* Web App 还没有在国内市场扮演起重要的角色\n\n----\n\n* 尊重技术，同时尊重用户"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# 三、How HTML5? Why Slide Shows?"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "### How HTML5?",
+            "picture": "/slides/data/images/20120022004015.jpg"
+        }
+    }, {
+        "layout": "layout_picture",
+        "values": {
+            "title": "### How HTML5?",
+            "picture": "/slides/data/images/20120022004030.jpg"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## Why Slide Shows?",
+            "content": "* 《让子弹飞》：步子迈大了，容易扯着蛋！\n\n----\n\n* 国内现在都在谈概念、秀技术，至今没有真正的王牌产品问世\n\n----\n\n* 幻灯片是常见应用，接触的机会非常频繁\n\n----\n\n* 网上已经有一些HTML5幻灯片的出现，但我们缺乏对其深入的了解\n\n----\n\n* 通过共鸣度较高的简单应用的实战，拉近我们和HTML5之间的距离\n\n----\n\n* 大家平时既是观察者，又是使用者，今天大家都会变成开发者！"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 四、HTML5幻灯片的制作过程",
+            "content": "1. 功能点摘要\n2. HTML结构设计\n3. 分步实现JS逻辑和CSS表现\n4. 特殊元素特殊处理\n5. 其它高级处理"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 1. 功能点整理",
+            "content": "1. 上翻页，下翻页：上、下、左、右、PAGE UP、PAGE DOWN\n2. 翻页到最前、最后：HOME、END\n3. 翻到指定的页：通过location hash，即#slideX (注意：要考虑hash纠错)；通过快捷键，Ctrl + G"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 2. HTML结构设计",
+            "content": "* 原则：尽量让结构简单、尽量沿用Powerpoint的结构\n* 只要body > div(.slide)\n* 确定id命名规律：#slideX\n* 提供统一的.tmpl-xxx模板类型，这里和Powerpoint中的模板对应\n* 每个页面都可以由标题(h1)、次标题(h2)、正文、段落、图片等固定标签组合而成，和Powerpoint中的元素对应"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 3. 分步实现JS逻辑和CSS表现",
+            "content": "* 初始化基本样式\n* 通过:target伪类实现当前显示哪张幻灯片\n* 为不同的模板类设置不一样的显示效果\n* 设置三个基本的翻页的js接口：gotoPage/gotoNext/gotoPrev\n* 在页面载入时进行初始化调整\n* 绑定相关的鼠标、键盘事件"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 4. 特殊元素特殊处理",
+            "content": "* 幻灯片内部动画：通过为动画元素增加一个特殊的class来进行识别\n\n----\n\n* 当幻灯片内有input/textarea/select，且用户聚焦在这些表单控件上时，需要屏蔽全局快捷键和鼠标事件"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 5. 其它高级处理",
+            "content": "* 加入幻灯之间的切换动画，未来可尝试插件化和多样化\n\n----\n\n* 完善幻灯片样式模板机制，未来可尝试模板代码独立\n\n----\n\n* 设计了几个简单的程序钩子(hooks)\n\n----\n\n* 兼容 IE 6：通过条件注释 + 程序钩子 (+ flash)实现、  \n用一颗 Web App 的心去看待 IE 6，那么它也是 HTML5 的一部分 ^_^"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 五、发散思路",
+            "content": "* 更好的标签语义\n* 根据文字内容多少自适应文字大小\n* 快速预览多张幻灯片的全局查看模式\n* 页面悬停左右区域时显示翻页按钮\n* 辅助工具：马克笔等"
+        }
+    }, {
+        "layout": "layout_default",
+        "values": {
+            "title": "## 五、发散思路 (续)",
+            "content": "* 开发配套的可视化编辑器和页面生成程序\n* 可以将网页格式在博客和幻灯片之间自由转换\n* 完成一个带账户系统的幻灯片分享网站\n* 应对不同的浏览器和操作系统\n* 无障碍操作、演示用的移动端简易控制器"
+        }
+    }, {
+        "layout": "layout_subtitle",
+        "values": {
+            "title": "# THE END",
+            "content": "谢谢大家"
+        }
+    }]
+}

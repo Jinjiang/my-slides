@@ -1,0 +1,606 @@
+var presentation = {
+    "defaults": {
+        "transition": "transition_rotate12",
+        "layout": "layout_default"
+    },
+    "slides": [
+        {
+            "values": {
+                "content": "赵锦江  \nWebReBuild.ORG 第五届年会北京站  \n2011-11-12",
+                "title": "# WebApp时代的界面布局浅析"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "transition": "transition_vertical_3d",
+            "values": {
+                "content": "### 赵锦江(勾三股四)\n" +
+                        "* Tags: maxthon/f2e/music/football\n" +
+                        "* QQ: 110698041\n" +
+                        "* E/M: zhaojinjiang@yahoo.com.cn\n" +
+                        "* Blog: [http://jiongks.name/](http://jiongks.name/)\n" +
+                        "* Weibo: [http://weibo.com/mx006](http://weibo.com/mx006)",
+                "title": "## 自我介绍"
+            }
+        },
+        {
+            "values": {
+                "title": "# WebPage时代的布局"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "* 其功效集中在内容的展现\n" +
+                        "* 多以文档形式存在\n" +
+                        "* 流式布局",
+                "title": "## WebPage"
+            }
+        },
+        {
+            "values": {
+                "content": "* <header> 页眉 </header>\n" +
+                        "* <nav> 横向导航 </nav>\n" +
+                        "* <aside> 侧边导航 </aside>\n" +
+                        "* <content> 正文内容 </content>\n" +
+                        "* <footer> 页脚 </footer>",
+                "title": "## 常见的WebPage布局"
+            }
+        },
+        {
+            "values": {
+                "content": "[http://css-tricks.com/121-what-beautiful-html-code-looks-like/](http://css-tricks.com/121-what-beautiful-html-code-looks-like/)",
+                "picture": "/slides/data/images/20120022010137.png",
+                "title": "## Beautiful HTML Code"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "截图来自：网易新闻、Typecho.org",
+                "picture": "/slides/data/images/20120022010014.png",
+                "title": "## 经典案例：新闻、博客"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "title": "# WebPage++时代"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "### 不同之处：\n\n" +
+                        "* 谋求更丰富的交互\n" +
+                        "* 谋求更灵活的布局\n" +
+                        "* 谋求更开放的版式",
+                "title": "## 星星还是那个星星"
+            }
+        },
+        {
+            "values": {
+                "content": "截图来源：webrebuild.org的微博",
+                "picture": "/slides/data/images/20120022010207.png",
+                "title": "## 大量的交互性元素"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "截图来源：人人网底边栏",
+                "picture": "/slides/data/images/20120022010232.png",
+                "title": "## 对操作的集中控制"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "截图来源：傲游账户中心",
+                "picture": "/slides/data/images/20120022010440.png",
+                "title": "## 更复杂的交互逻辑"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "* 围绕着内容发展出了各种各样的按钮和浮层\n" +
+                        "* 出现了控制面板和工具条\n" +
+                        "* 出现了复杂的交互\n" +
+                        "* 内容由静态转为动态，信息越来越多\n" +
+                        "* WebApp的影子开始浮现",
+                "title": "## 从界面的角度看"
+            }
+        },
+        {
+            "values": {
+                "content": "截图来源：新浪微博、人人网",
+                "picture": "/slides/data/images/20120022012348.png",
+                "title": "## 典型的例子：微博、SNS"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "title": "# WebApp时代的到来"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "### 两条线索：\n\n" +
+                        "* 能够取代传统应用程序\n" +
+                        "* 运用了大量的HTML5技术",
+                "title": "## 什么是WebApp？"
+            }
+        },
+        {
+            "values": {
+                "content": "Google Apps、iCloud.com",
+                "picture": "/slides/data/images/20120022012406.png",
+                "title": "## 经典的案例"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "[http://web.appstorm.net/](http://web.appstorm.net/)",
+                "picture": "/slides/data/images/20120022012426.png",
+                "title": "## 更多的WebApp"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "title": "# 界面布局正在悄然改变……"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "内容 → 网页 → 浏览区域",
+                "picture": "/slides/data/images/20120022012458.png",
+                "title": "## WebPage"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "内容 → 可视区域",
+                "picture": "/slides/data/images/20120022012504.png",
+                "title": "## WebApp"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "### WebPage\n\n" +
+                        "* 网页好比一张长长的画卷，\n" +
+                        "* 浏览器犹如放大镜，\n" +
+                        "* 浏览网页，好比用户那着放大镜看画卷的局部\n\n" +
+                        "### WebAPP\n\n" +
+                        "* 浏览器如观光玻璃，\n" +
+                        "* 内容如流水一样，浩瀚、灵活，\n" +
+                        "* 用户在水族馆里观赏风景",
+                "title": "## WebPage vs. WebApp"
+            }
+        },
+        {
+            "values": {
+                "content": "直接根据可视空间设计界面  \n" +
+                        "解放思想，解放生产力",
+                "title": "# 回归到界面的本质"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "* 以可视空间为本 ↓\n" +
+                        "* 如何充分利用有边界的可视空间？ ↓\n" +
+                        "* 填满可视空间先…… ↓\n" +
+                        "* 开始各种探索、思考、纠结…… ↓\n" +
+                        "* 这时，我们不妨从传统应用程序的界面中开拓视野，找寻灵感",
+                "title": "## 换个角度考虑界面布局"
+            }
+        },
+        {
+            "values": {
+                "content": "WPF / Cocoa / HTMLayout / ( + CSS 3 )",
+                "title": "# 找了几个别的领域的技术"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "### WPF (Windows Presentation Foundation)：\n\n" +
+                        "* 是微软推出的基于Windows Vista的用户界面框架，属于.net的一部分\n\n" +
+                        "### Cocoa：\n\n" +
+                        "* 苹果公司为Mac OS X所创建的原生面向对象的编程环境\n\n" +
+                        "### HTMLayout：\n\n" +
+                        "* 一个免费的开源界面库(核心未开源)，以DLL的方式运行，可以高效的解析和渲染HTML网页，并根据界面库的特征，做了很多有用的功能性扩展。傲游3浏览器的界面就是基于HTMLayout设计和开发的",
+                "title": "## 介绍几种界面布局的思路"
+            }
+        },
+        {
+            "values": {
+                "title": "# WPF"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "content": "朝一个特定的方向(横向或纵向)，依次排列子元素",
+                "picture": "/slides/data/images/20120022012530.png",
+                "title": "## WPF - StackPanel"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "在 StackPanel 的基础上，可以允许子元素自动折行",
+                "picture": "/slides/data/images/20120022012553.png",
+                "title": "## WPF - WrapPanel"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "网格式布局，可设定一共几行几列，和每行的行高、每列的列宽",
+                "picture": "/slides/data/images/20120022012611.png",
+                "title": "## WPF - Grid"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "    <Grid.ColumnDefinitions>\n" +
+                        "        <ColumnDefinition Width=\"Auto\" />\n" +
+                        "        <ColumnDefinition Width=\"2*\" />\n" +
+                        "        <ColumnDefinition Width=\"1*\" />\n" +
+                        "        <ColumnDefinition Width=\"80\" />\n" +
+                        "    </Grid.ColumnDefinitions>",
+                "title": "## WPF - Grid的列宽举例"
+            }
+        },
+        {
+            "values": {
+                "picture": "/slides/data/images/20120022012619.png",
+                "title": "## WPF - Grid的列宽举例"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "把界面分成上、下、左、右、中间5个部分",
+                "picture": "/slides/data/images/20120022012635.png",
+                "title": "## WPF - DockPanel"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "做一个简单的WPF浏览器界面",
+                "title": "# WPF Demo 演示"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "软件名称：Kaxaml",
+                "picture": "/slides/data/images/20120022012652.png",
+                "title": "## WPF Browser"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "title": "# Appkit (Cocoa)"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "content": "类似绝对定位 (软件：XCode)",
+                "picture": "/slides/data/images/20120022012721.png",
+                "title": "## 坐标、尺寸及其自动调整的方式"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "### Toolbar\n\n" +
+                        "* 一种特定的布局方式，只能出现在窗口的最上部\n" +
+                        "* 子元素从左到右排布，可以放置按钮、输入框，也可以放置“可无限撑大”的空白区域，将其右侧的子元素挤到工具栏的最后边\n\n" +
+                        "### Menu\n\n" +
+                        "* 菜单栏，永远在屏幕的最上面",
+                "title": "## 一些特定界面元素"
+            }
+        },
+        {
+            "values": {
+                "picture": "/slides/data/images/20120022012739.png",
+                "title": "## Cocoa - Toolbar"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "更复杂的界面布局都需要通过代码来实现",
+                "picture": "/slides/data/images/20120022012749.png",
+                "title": "## 更多子元素的内部布局"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "现场做一个简单的Mac浏览器界面",
+                "title": "# Cocoa Demo 演示"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "title": "# HTMLayout"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "content": "### 可以让元素撑满整个窗口的高度\n\n" +
+                        "传递很明确的信息  \n" +
+                        "——应用程序的界面是有固定高度的",
+                "title": "## height: 100%"
+            }
+        },
+        {
+            "values": {
+                "content": "### 在剩余的总长度中选取相应比例的长度\n\n" +
+                        "相当于WPF中的*单位\n\n" +
+                        "    <tr>\n" +
+                        "        <td style=\"width: 50px; padding: 10px;\">TD 1</td>\n" +
+                        "        <td style=\"width: 20%%;\">TD 2</td>\n" +
+                        "        <td style=\"width: 80%%;\">TD 3</td>\n" +
+                        "        <td style=\"width: 20%;\">TD 4</td>\n" +
+                        "    </tr>\n\n" +
+                        "[http://www.terrainformatica.com/htmlayout/fspu.whtm](http://www.terrainformatica.com/htmlayout/fspu.whtm)",
+                "title": "## 新长度单位：%%"
+            }
+        },
+        {
+            "values": {
+                "content": "    flow: vertical | horizontal | vertical-flow | horizontal-flow | grid\n\n" +
+                        "* 前四个相当于WPF中的StackPanel和WrapPanel，分横向纵向两个方向\n" +
+                        "* 第五个相当于WPF中的Gird\n\n" +
+                        "[http://www.terrainformatica.com/htmlayout/flow.whtm](http://www.terrainformatica.com/htmlayout/flow.whtm)",
+                "title": "## 新布局方式：flow"
+            }
+        },
+        {
+            "values": {
+                "content": "### calc(...) 长度计算函数\n\n" +
+                        "[http://www.terrainformatica.com/htmlayout/csss!-calc-function.whtm](http://www.terrainformatica.com/htmlayout/csss!-calc-function.whtm)\n\n" +
+                        "### Flex 布局 / min-intrinsic / max-intrinsic\n\n" +
+                        "[http://www.terrainformatica.com/w3/flex-layout/flex-layout.htm](http://www.terrainformatica.com/w3/flex-layout/flex-layout.htm)\n\n" +
+                        "### 更多：\n\n" +
+                        "[http://www.terrainformatica.com/htmlayout/](http://www.terrainformatica.com/htmlayout/)",
+                "title": "## 其它"
+            }
+        },
+        {
+            "values": {
+                "content": "傲游3浏览器皮肤系统  \n" +
+                        "大量的素材、文档、源代码",
+                "title": "# HTMLayout 实践"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "[http://www.maxthon.cn/lab/skin/](http://www.maxthon.cn/lab/skin/)",
+                "picture": "/slides/data/images/20120022012820.png",
+                "title": "## 首页 → 傲游实验室 → 皮肤系统"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "从 NativeApp 得到的启发",
+                "title": "# 简单回顾一下"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "content": "* 遭遇了流式布局缺失的界面库，才懂得流式布局的强大！\n" +
+                        "* 流式布局想垒积木一样灵活，非常适合功能性界面",
+                "title": "## 流式布局其实很棒"
+            }
+        },
+        {
+            "values": {
+                "content": "* 较为复杂的应用程序几乎都可以从DockPanel作为界面布局的起点",
+                "title": "## DockPanel 式布局很讨喜"
+            }
+        },
+        {
+            "values": {
+                "content": "* 在较为简单的界面中，绝对定位是最直观、成本最低的方式\n" +
+                        "* 可以很好的配合所见即得编辑器进行布局",
+                "title": "## 绝对定位应用最为广泛"
+            }
+        },
+        {
+            "values": {
+                "content": "* DPI的改变\n" +
+                        "* 多语言环境等",
+                "title": "## 绝对定位可能面临的问题"
+            }
+        },
+        {
+            "values": {
+                "content": "* 给每个元素保留足够的余地，以应付内容变化\n" +
+                        "* 从排版上尽量回避由于文字长短、多媒体元素尺寸大小造成的布局混乱\n\n" +
+                        "### 推荐：\n\n" +
+                        "* 《Flexible Web Design》 (灵活Web设计)  \n" +
+                        "---- Zoe Mickley Gillenwater (加)",
+                "title": "## 建议"
+            }
+        },
+        {
+            "values": {
+                "title": "# 几个WebApp的“好朋友”"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "    border-box\n" +
+                        "    padding-box\n" +
+                        "    content-box\n\n" +
+                        "* 可以选择根据边框、内边距或实际内容计算盒模型\n" +
+                        "* 适用于边框大小、边距大小会动态变化的元素",
+                "title": "## box-sizing"
+            }
+        },
+        {
+            "values": {
+                "content": "    border-box\n" +
+                        "    padding-box\n" +
+                        "    content-box\n\n" +
+                        "* 可以选择根据边框、内边距或实际内容计算背景图片的坐标起点\n" +
+                        "* 和覆盖区域\n" +
+                        "* 同样适用于边框大小、边距大小会动态变化的元素",
+                "title": "## background-origin (-clip)"
+            }
+        },
+        {
+            "values": {
+                "content": "    position: absolute;\n" +
+                        "    left: ...;\n" +
+                        "    right: ...;\n" +
+                        "    top: ...;\n" +
+                        "    bottom: ...;\n" +
+                        "    z-index: n;\n\n" +
+                        "* 快速定位一个元素在窗口中的位置和大小\n" +
+                        "* 适用于尺寸需要根据窗口变化而变化的元素",
+                "title": "## 绝对定位"
+            }
+        },
+        {
+            "values": {
+                "content": "* 类似 grid 的布局，可以让若干子元素，通过具体长度或长度比例，撑满整行/整列容器空间\n" +
+                        "* 但它是单行或单列的，并没有网格形式\n" +
+                        "* 适用于工具栏等元素，以及界面上大块的布局划分",
+                "title": "## display: box / flex-*"
+            }
+        },
+        {
+            "values": {
+                "content": "    scale(n)\n\n" +
+                        "* 适用于工具栏等元素，以及界面上大块的布局划分\n" +
+                        "* 适用于尺寸需要等比例变化的展示性元素",
+                "title": "## transform (-origin)"
+            }
+        },
+        {
+            "values": {
+                "content": "做一个简单的WebApp浏览器",
+                "title": "# WebApp Demo 演示"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "* 网格化布局\n" +
+                        "* 从设计的角度看，非常实用",
+                "title": "## _grid_"
+            }
+        },
+        {
+            "values": {
+                "content": "[http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/](http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/)",
+                "picture": "/slides/data/images/20120022012856.png",
+                "title": "## 例子 (IE 10 supported)"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "### 通过不同的界面尺寸，应用不同的CSS样式\n\n" +
+                        "    @media screen and (min-width: 400px) and (max-width: 700px) { … }\n" +
+                        "    @media screen and (device-width: 800px) { … }",
+                "title": "## _media queries_"
+            }
+        },
+        {
+            "values": {
+                "picture": "/slides/data/images/20120022012923.png",
+                "title": "## 例子：[http://css-tricks.com/](http://css-tricks.com/)"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "### 两者均属于对于界面布局细节的雕琢\n\n" +
+                        "* 分列显示大块内容\n" +
+                        "* 打破“矩形盒子”的限制，在高度自定义的一个或多个区域内填充内容",
+                "title": "## _multi-column / regions_"
+            }
+        },
+        {
+            "values": {
+                "content": "来源：[http://msdn.microsoft.com/en-us/ie/hh272902.aspx](http://msdn.microsoft.com/en-us/ie/hh272902.aspx)",
+                "picture": "/slides/data/images/20120022013001.png",
+                "title": "## Regions图解"
+            },
+            "layout": "layout_picture"
+        },
+        {
+            "values": {
+                "content": "* w3c官网 - CSS\n" +
+                        "* win8 html5 platform 展示页\n" +
+                        "* HTML5 Rocks - Tutorials\n" +
+                        "* 前端观察",
+                "title": "## 参考资料"
+            }
+        },
+        {
+            "values": {
+                "content": "这张幻灯片也是一个WebApp！",
+                "title": "# 其实⋯⋯"
+            },
+            "layout": "layout_title"
+        },
+        {
+            "values": {
+                "content": "### 传统的ppt\n\n" +
+                        "* 太过笨重\n" +
+                        "* 很多冗余的功能和设计\n" +
+                        "* 只有一张空白幻灯片的pptx文件也有几百行代码\n" +
+                        "* 大部分的Powerpoint功能我们根本用不到\n\n" +
+                        "### 我们的目的\n\n" +
+                        "* 带有交互性的演示\n" +
+                        "* 小巧轻便、易于分享和传播\n" +
+                        "* 跨平台\n" +
+                        "* 可扩展\n" +
+                        "* 可融入其它的软件和系统",
+                "title": "## HTML5幻灯片系统"
+            }
+        },
+        {
+            "values": {
+                "content": "欢迎加入我们的行列！",
+                "title": "# 希望可以重新定义幻灯演示"
+            },
+            "layout": "layout_subtitle"
+        },
+        {
+            "values": {
+                "content": "谢谢大家",
+                "title": "## THE END"
+            },
+            "layout": "layout_subtitle"
+        }
+    ],
+    "theme": "blank"
+}
