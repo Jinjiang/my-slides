@@ -242,7 +242,7 @@ Why deprecated?
 
 ### `<vue-keyboard-over>`
 
-[演示](https://jiongks.name/vue-keyboard-over/) [原始码](https://github.com/Jinjiang/vue-keyboard-over/blob/master/src/keyboard-over.vue#L41:L80)
+[演示](https://jinjiang.dev/vue-keyboard-over/) [原始码](https://github.com/Jinjiang/vue-keyboard-over/blob/master/src/keyboard-over.vue#L41:L80)
 
 ----
 

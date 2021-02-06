@@ -70,7 +70,7 @@ require('vm').resetData({
             },
             "content": {
                 "type": "img",
-                "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/05/2978944287.png",
+                "value": "https://jiongks.name/uploads/2013/05/2978944287.png",
                 "config": {}
             }
         }
@@ -84,7 +84,7 @@ require('vm').resetData({
             },
             "content": {
                 "type": "img",
-                "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/05/638131027.png"
+                "value": "https://jiongks.name/uploads/2013/05/638131027.png"
             }
         }
     }, {
@@ -97,7 +97,7 @@ require('vm').resetData({
             },
             "content": {
                 "type": "img",
-                "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/05/1592463238.png"
+                "value": "https://jiongks.name/uploads/2013/05/1592463238.png"
             }
         }
     }, {
@@ -110,7 +110,7 @@ require('vm').resetData({
             },
             "content": {
                 "type": "img",
-                "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/05/1338199381.png"
+                "value": "https://jiongks.name/uploads/2013/05/1338199381.png"
             }
         }
     }, {
@@ -343,7 +343,7 @@ require('vm').resetData({
             },
             "content": {
                 "type": "code",
-                "value": "http://jiongks.sinaapp.com/blog/build-any-web-project-with-requirejs-optimizer/",
+                "value": "http://jiongks.name/blog/build-any-web-project-with-requirejs-optimizer/",
                 "config": {
                     "type": "demo"
                 }

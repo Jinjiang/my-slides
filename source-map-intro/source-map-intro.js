@@ -60,7 +60,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/153757798.jpg"
+          "value": "https://jiongks.name/uploads/2013/08/153757798.jpg"
         }
       }
     },
@@ -88,7 +88,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/3823004816.jpg",
+          "value": "https://jiongks.name/uploads/2013/08/3823004816.jpg",
           "config": {}
         }
       }
@@ -131,7 +131,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/1007624987.png",
+          "value": "https://jiongks.name/uploads/2013/08/1007624987.png",
           "config": {}
         }
       }
@@ -160,7 +160,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/2161112187.jpg",
+          "value": "https://jiongks.name/uploads/2013/08/2161112187.jpg",
           "config": {}
         }
       }
@@ -218,7 +218,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/1341914157.png",
+          "value": "https://jiongks.name/uploads/2013/08/1341914157.png",
           "config": {}
         }
       }
@@ -233,7 +233,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/4227042196.png"
+          "value": "https://jiongks.name/uploads/2013/08/4227042196.png"
         }
       }
     },
@@ -330,7 +330,7 @@ require('vm').resetData({
         },
         "content2": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/2398149574.png",
+          "value": "https://jiongks.name/uploads/2013/08/2398149574.png",
           "config": {}
         }
       }
@@ -390,7 +390,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2012/06/1876065904.png",
+          "value": "https://jiongks.name/uploads/2012/06/1876065904.png",
           "config": {}
         }
       }
@@ -455,7 +455,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/755456510.png"
+          "value": "https://jiongks.name/uploads/2013/08/755456510.png"
         }
       }
     },
@@ -605,7 +605,7 @@ require('vm').resetData({
         },
         "content2": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/1051332593.jpg",
+          "value": "https://jiongks.name/uploads/2013/08/1051332593.jpg",
           "config": {}
         }
       }
@@ -637,7 +637,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2012/06/1876065904.png",
+          "value": "https://jiongks.name/uploads/2012/06/1876065904.png",
           "config": {}
         }
       }
@@ -736,7 +736,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2012/06/1876065904.png",
+          "value": "https://jiongks.name/uploads/2012/06/1876065904.png",
           "config": {}
         }
       }
@@ -810,7 +810,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/292900675.jpg",
+          "value": "https://jiongks.name/uploads/2013/08/292900675.jpg",
           "config": {}
         }
       }
@@ -825,7 +825,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2012/06/1876065904.png",
+          "value": "https://jiongks.name/uploads/2012/06/1876065904.png",
           "config": {}
         }
       }
@@ -927,7 +927,7 @@ require('vm').resetData({
         },
         "content2": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/1656036438.jpg",
+          "value": "https://jiongks.name/uploads/2013/08/1656036438.jpg",
           "config": {}
         }
       }
@@ -1038,7 +1038,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/1922717210.png",
+          "value": "https://jiongks.name/uploads/2013/08/1922717210.png",
           "config": {}
         }
       }
@@ -1067,7 +1067,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/630442239.png"
+          "value": "https://jiongks.name/uploads/2013/08/630442239.png"
         }
       }
     },
@@ -1081,7 +1081,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/729218352.png"
+          "value": "https://jiongks.name/uploads/2013/08/729218352.png"
         }
       }
     },
@@ -1165,7 +1165,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/1921075419.png",
+          "value": "https://jiongks.name/uploads/2013/08/1921075419.png",
           "config": {}
         }
       }
@@ -1208,7 +1208,7 @@ require('vm').resetData({
         },
         "content": {
           "type": "img",
-          "value": "http://jiongks-typecho.stor.sinaapp.com/usr/uploads/2013/08/2368501890.jpg",
+          "value": "https://jiongks.name/uploads/2013/08/2368501890.jpg",
           "config": {}
         }
       }

@@ -30,7 +30,7 @@ It's really light but...
 
 ## Resources
 
-- [CSS Scoping in Web Components](http://jiongks.name/slides/css-scoping/)
+- [CSS Scoping in Web Components](http://jinjiang.dev/slides/css-scoping/)
 - screencast: [lighting talk](http://www.tudou.com/programs/view/8bvwGHaL6T4/)
 - screencast: [more details](http://www.tudou.com/programs/view/dz4aXjDFnLw/)
 
